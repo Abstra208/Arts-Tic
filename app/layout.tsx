@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Arts & TIC',
+  description: 'Une concentration de La Camaradière.',
   openGraph: {
     title: 'Arts & TIC',
     description: 'Une concentration de La Camaradière.',
