@@ -10,7 +10,7 @@ export default function NiveauxPage() {
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
     
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       sectionsRef.current.forEach((section, index) => {
         if (section) {
           ScrollTrigger.create({
