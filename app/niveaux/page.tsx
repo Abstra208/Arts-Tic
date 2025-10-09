@@ -2,11 +2,9 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Sidebar } from 'lucide-react';
 
 export default function NiveauxPage() {
   const sectionsRef = useRef<HTMLElement[]>([]);
-  const [activeSection, setActiveSection] = React.useState(0);
 
   useEffect(() => {
     // Register ScrollTrigger plugin
@@ -22,8 +20,6 @@ export default function NiveauxPage() {
             pin: true,
             pinSpacing: false,
             id: `section-pin-${index}`,
-            onEnter: () => setActiveSection(index),
-            onEnterBack: () => setActiveSection(index)
           });
         }
       });
@@ -35,15 +31,6 @@ export default function NiveauxPage() {
       }
     };
   }, []);
-
-  // Array of section titles
-  const sections = ["Secondaire 1", "Secondaire 2", "Secondaire 3", "Secondaire 4", "Secondaire 5"];
-  
-  // Handle clicking on a navigation dot to scroll to that section
-  const scrollToSection = (index: number) => {
-    sectionsRef.current[index]?.scrollIntoView({ behavior: 'smooth' });
-    setActiveSection(index);
-  };
 
   return (
     <>

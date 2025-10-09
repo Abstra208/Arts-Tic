@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
     const pathname = usePathname();
@@ -26,7 +27,7 @@ export default function Header() {
     return (
         <header className="fixed top-4 flex flex-row justify-between items-center z-1000 w-screen px-15">
             <Link href="/" className="flex flex-row justify-center items-center space-x-3 text-4xl text-bold" scroll={false}>
-                <img className="h-11 w-auto" src="/logo.webp" alt="" />
+                <Image className="h-11 w-auto" height={1736} width={2036} src="/logo.webp" alt="" />
                 <h1 className={`text-black transition-transform duration-500 ease-in-out ${scrolledDown ? 'transform -translate-y-20' : 'transform translate-y-0'}`}>
                     Arts & TIC
                 </h1>

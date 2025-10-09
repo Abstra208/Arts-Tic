@@ -28,7 +28,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`body text-black ${FunnelDisplay.className}`}>
         <Header />
-        <Render children={children} />
+        <Render>
+          {children}
+        </Render>
       </body>
     </html>
   );

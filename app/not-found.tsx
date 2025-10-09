@@ -26,7 +26,7 @@ export default function NotFound() {
                 </div>
 
                 <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                  Hey, I'm [Your Name]
+                  Hey, I&apos;m [Your Name]
                 </h1>
                 
                 <p className="text-base text-gray-600 mb-5 leading-relaxed">
@@ -70,15 +70,15 @@ export default function NotFound() {
                   <h2 className="text-xl font-bold text-gray-900 mb-3">My Journey</h2>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     With over [X] years of experience in web development and design, 
-                    I've helped businesses and individuals bring their digital visions to life. 
+                    I&apos;ve helped businesses and individuals bring their digital visions to life. 
                     My passion lies in creating intuitive, beautiful, and performant applications 
-                    that make a real difference in people's lives.
+                    that make a real difference in people&apos;s lives.
                   </p>
                 </div>
 
                 <div>
                   <p className="text-gray-500 text-xs mb-3">
-                    Looks like you've wandered off the beaten path
+                    Looks like you&apos;ve wandered off the beaten path
                   </p>
                   
                   {/* Social Links */}

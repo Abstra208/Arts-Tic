@@ -12,7 +12,7 @@ export default function Page() {
         <div>
             <Hero />
             <section className='my-16 px-15 max-w-7xl mx-auto'>
-                <h1 className='text-4xl md:text-5xl font-bold text-center mb-10 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Plus qu'un simple programme</h1>
+                <h1 className='text-4xl md:text-5xl font-bold text-center mb-10 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Plus qu&apos;un simple programme</h1>
                 
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16'>
                     <div className='bg-white rounded-lg shadow-lg p-6'>
