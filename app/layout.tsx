@@ -6,6 +6,26 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Arts & TIC',
+  openGraph: {
+    title: 'Arts & TIC',
+    description: 'Une concentration de La Camaradière.',
+    siteName: 'Arts & TIC',
+    url: 'https://artstic.crealab.ca',
+    images: [
+      {
+        url: 'https://artstic.crealab.ca/images/hero.jpg',
+        width: 2048,
+        height: 1475,
+        alt: 'Arts & TIC',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Arts & TIC',
+    description: 'Une concentration de La Camaradière.',
+    images: ['https://artstic.crealab.ca/images/hero.jpg'],
+  },
 };
 
 const FunnelDisplay = localFont({
