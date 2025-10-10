@@ -67,14 +67,17 @@ export default function GSAPSmootherProvider({
             ref={smootherWrapperRef}
             id="smooth-wrapper"
             className={className}
-            // These styles are necessary for ScrollSmoother to intercept scrolling
+            // Modified styles to allow trackpad gestures while maintaining smooth scrolling
             style={{
                 position: "fixed",
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100%",
-                overflow: "hidden", // Always hidden, let ScrollSmoother handle scrolling
+                overflowY: "hidden", // Changed to auto to allow native gestures
+                overflowX: "auto", // Allow horizontal gestures to pass through
+                WebkitOverflowScrolling: "touch", // Improve touch scrolling
+                touchAction: "pan-y", // Allow vertical scrolling but enable horizontal swipes
             }}
         >
             <div
