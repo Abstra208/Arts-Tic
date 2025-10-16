@@ -2,6 +2,7 @@ import Hero from '@/components/hero';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import SlideButton from '@/components/slidebutton';
+import { SlidingCarousel } from '@/components/slidingcarousel';
 
 export const metadata: Metadata = {
   title: 'Arts & TIC - Accueil',
@@ -35,22 +36,28 @@ export default function Page() {
                         <div className='flex flex-col md:flex-row gap-6 items-center justify-center'>
                             <div className='flex flex-col items-center p-4 transition-transform bg-gray-50 rounded-md'>
                                 <Image src="/images/exploarts.webp" width={150} height={150} alt="Activité Explo Arts" className="rounded-full border-4 border-blue-100" />
-                                <h3 className='mt-4 text-xl font-medium'>Explo Arts</h3>
+                                <h3 className='mt-4 text-xl font-medium'>Midi Arts</h3>
                                 <SlideButton link='/explo-arts#midi' />
                             </div>
                             <div className='flex flex-col items-center p-4 transition-transform bg-gray-50 rounded-md'>
                                 <Image src="/images/crealab.png" width={150} height={150} alt="Activité CréaLab" className="rounded-full border-4 border-blue-100" />
-                                <h3 className='mt-4 text-xl font-medium'>CréaLab</h3>
+                                <h3 className='mt-4 text-xl font-medium'>Midi CréaLab</h3>
                                 <SlideButton link='/tic-creativite#midi' />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className='px-15'>
-                <h1></h1>
+            <section className='py-15'>
+                <h1 className='text-4xl md:text-5xl font-bold text-center mb-10 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Vous voulez voir des projets ?</h1>
+                <SlidingCarousel speed={6} className="h-140">
+                    <Image src="/images/projets/maquette2.jpg" width={500} height={500} alt="Projet Explo Arts" className='h-full w-auto' />
+                    <Image src="/images/projets/aquaurabaine.jpg" width={500} height={500} alt="Projet CréaLab" className='h-full w-auto'/>
+                    <Image src="/images/projets/soulier2.jpg" width={500} height={500} alt="Projet CréaLab" className='h-full w-auto'/>
+                    <Image src="/images/projets/maquette.jpg" width={500} height={500} alt="Projet Explo Arts" className='h-full w-auto'/>
+                </SlidingCarousel>
             </section>
-            <section className="my-16 h-[70svh]">
+            <section className="mb-16 h-[70svh]">
                 <Image src="/images/arts.png" width={1920} height={1080} alt="" className="w-full h-full object-cover" />
             </section>
             <section className="h-[60vh] flex flex-col items-center justify-center">

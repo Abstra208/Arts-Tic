@@ -53,6 +53,15 @@ export default function Header() {
                         </Link>
                     </li>
                     <li>
+                        <Link
+                            className={`font-medium transition-colors duration-200 relative group ${pathname === '/projets' ? 'after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-black' : ''}`}
+                            href="/projets"
+                        >
+                            Projets
+                            <span className={`absolute -bottom-1 left-0 h-0.5 bg-black transition-all duration-300 ${pathname === '/projets' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                        </Link>
+                    </li>
+                    <li>
                         <Link 
                             className={`font-medium transition-colors duration-200 relative group ${pathname === '/explo-arts' ? 'after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-black' : ''}`}
                             href="/explo-arts"
