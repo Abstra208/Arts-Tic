@@ -12,13 +12,13 @@ export default function Page() {
     return (
         <div>
             <Hero />
-            <section className='mt-16 px-4 md:px-8 w-full'>
+            <section className='mt-16 px-15 w-full'>
                 <div className='flex items-center flex-col'>
                     <h1 className='text-4xl md:text-5xl font-bold text-center relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Plus qu&apos;un simple programme</h1>
                     <p className='text-xl text-center mt-4'>Avec deux differents parcours disponible pour les élèves.</p>
                 </div>
-                <div className='w-full'>
-                    <div className='bg-white rounded-lg p-6 w-full'>
+                <div className='w-full py-6'>
+                    <div className='bg-white rounded-lg w-full'>
                         <div className='flex flex-col md:flex-row gap-6 items-center justify-center w-full'>
                             <div className='flex flex-col items-center p-4 transition-transform bg-gray-50 rounded-md w-full md:w-1/2'>
                                 <Image src="/images/explo-art/DSC00976.jpg" width={300} height={300} alt="Parcours Explo Arts" className="border-2 rounded-t-2xl rounded-b-lg border-blue-100 w-full h-auto object-cover" />
@@ -55,7 +55,7 @@ export default function Page() {
             <section className="mb-16 h-[70svh]">
                 <Image src="/images/arts.png" width={1920} height={1080} alt="" className="w-full h-full object-cover" />
             </section>
-            <section className="h-screen w-screen px-15">
+            <section className="h-auto w-screen px-15">
                 <h1 className='text-4xl md:text-5xl font-bold text-center mb-4 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Avez-vous le temps pour une vidéo?</h1>
                 <p className='text-xl text-center mb-4'>Cette vidéo est un projet réalisé par d&apos;anciens élèves de la concentration.</p>
                 <video
