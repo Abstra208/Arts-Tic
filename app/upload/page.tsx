@@ -1,12 +1,11 @@
 'use client';
- 
-import { type PutBlobResult } from '@vercel/blob';
+
 import { upload } from '@vercel/blob/client';
+import Image from 'next/image';
 import { useState, useRef } from 'react';
  
 export default function AvatarUploadPage() {
   const inputFileRef = useRef<HTMLInputElement>(null);
-  const [blob, setBlob] = useState<PutBlobResult | null>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [uploadProgress, setUploadProgress] = useState({ current: 0, total: 0 });
   const [isUploading, setIsUploading] = useState(false);
@@ -36,7 +35,7 @@ export default function AvatarUploadPage() {
               const response = await fetch(img.src);
               const blobData = await response.blob();
               console.log('image:', img);
-              const newBlob = await upload(img.title, blobData, {
+              await upload(img.title, blobData, {
                   access: 'public',
                   handleUploadUrl: `/api/upload`,
                   clientPayload: payload,
@@ -61,7 +60,7 @@ export default function AvatarUploadPage() {
                 Array.from(files).forEach((file) => {
                   const reader = new FileReader();
                   reader.onload = (event) => {
-                  const img = new Image();
+                  const img = document.createElement('img') as HTMLImageElement;
                   img.src = event.target?.result as string;
                   img.title = file.name;
                   setImages((prevImages) => [...prevImages, img]);
@@ -77,7 +76,7 @@ export default function AvatarUploadPage() {
                 <ul className='h-32 overflow-x-auto flex flex-row gap-2 border-2 border-gray-300'>
                   {images.map((img, index) => (
                     <li key={index} className='flex-shrink-0'>
-                      <img src={img.src} alt={`Image ${index}`} className='h-32 w-auto object-cover' />
+                      <Image src={img.src} alt={`Image ${index}`} className='h-32 w-auto object-cover' />
                     </li>
                   ))}
                 </ul>

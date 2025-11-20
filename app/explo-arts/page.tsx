@@ -31,25 +31,25 @@ export default function ArtsPage() {
             </section>
             <section className="w-full px-15 flex flex-col justify-end text-end">
                 <div className="w-full flex flex-col items-end">
-                    <h1 className="text-5xl text-bold">Étape deux: Place à l'art!</h1>
-                    <p className="text-2xl w-[70%]">Lorsque tout est bien compris, les élèves peuvent commencer à créer leurs œuvres d'art!</p>
+                    <h1 className="text-5xl text-bold">Étape deux: Place à l&apos;art!</h1>
+                    <p className="text-2xl w-[70%]">Lorsque tout est bien compris, les élèves peuvent commencer à créer leurs œuvres d&apos;art!</p>
                 </div>
                 <ul className="flex flex-row justify-end">
                     <li>
                         <Image src="/images/explo-art/DSC00976.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
-                        <p>Création d'œuvres d'art uniques</p>
+                        <p>Création d&apos;œuvres d&apos;art uniques</p>
                     </li>
                 </ul>
             </section>
             <section className="w-full px-15">
                 <div className="w-full flex flex-col">
                     <h1 className="text-5xl text-bold">Étape trois: Affichage</h1>
-                    <p className="text-2xl w-[70%]">Une fois les œuvres d'art créées, les élèves peuvent afficher fièrement leurs créations dans le hall de l'école ou dans les locales d'arts!</p>
+                    <p className="text-2xl w-[70%]">Une fois les œuvres d&apos;art créées, les élèves peuvent afficher fièrement leurs créations dans le hall de l&apos;école ou dans les locales d&apos;arts!</p>
                 </div>
                 <ul className="flex flex-row">
                     <li>
                         <Image src="/images/explo-art/DSC00977.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
-                        <p>Affichage d'un projet dans le hall de l'école</p>
+                        <p>Affichage d&apos;un projet dans le hall de l&apos;école</p>
                     </li>
                 </ul>
             </section>

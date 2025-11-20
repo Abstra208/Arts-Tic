@@ -39,7 +39,7 @@ export default function Page() {
                 </div>
             </section>
             <section className='py-15'>
-                <h1 className='text-4xl md:text-5xl font-bold text-center mb-4 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Plus intéressé à voir ce que l'on fait?</h1>
+                <h1 className='text-4xl md:text-5xl font-bold text-center mb-4 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Plus intéressé à voir ce que l&apos;on fait?</h1>
                 <p className='text-xl text-center mb-4'>On vous comprend. En voici quelques exemples :</p>
                 <SlidingCarousel speed={10} className='w-full'>
                     <Image src="/images/projets/maquette2.jpg" width={500} height={500} alt="Projet Explo Arts" />

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ColorPicker } from 'antd';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 
 interface ScreenProps {
     mode: string,
@@ -184,7 +184,7 @@ export default function Screen() {
                 <button onClick={() => newMode()}>Créer un mode</button>
             </div>
             <div>
-                <h2>Propriétés de l'écran :</h2>
+                <h2>Propriétés de l&apos;écran :</h2>
                 <div className='bg-[#556D7A] rounded-2xl border-4 border-black m-4 p-4'>
                     <h1 style={{ color: `rgb(${screenProps?.colorr}, ${screenProps?.colorg}, ${screenProps?.colorb})`}} className='text-6xl'>{screenProps?.message}</h1>
                 </div>
