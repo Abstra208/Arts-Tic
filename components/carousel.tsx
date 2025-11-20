@@ -67,7 +67,7 @@ export default function Carousel({
                 {Children.map(children, (child, index) => (
                     <div 
                         key={index} 
-                        className={`flex-shrink-0 pr-3`} 
+                        className={`flex-shrink-0`} 
                         style={{ 
                             width: `${100 / slidesToShow}%`
                         }}

@@ -20,29 +20,27 @@ export default function NotFound() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-gray-800 text-white rounded-lg px-2 py-1 text-xs font-medium">
-                    404
-                  </div>
                 </div>
 
                 <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                  Hey, I&apos;m [Your Name]
+                  Salut, je suis Ludovic!
                 </h1>
                 
                 <p className="text-base text-gray-600 mb-5 leading-relaxed">
-                  Creative developer, digital artist, and problem solver. 
-                  I craft beautiful experiences at the intersection of design and technology.
+                  Je suis l'étudiant derrière ce site et souvenirs figés grâce à mes photos.
+                  Je suis un étudiant canadien avec une passion pour le développement web, je suis spécialisé pour créer des sites web esthétiquement agréables et fonctionnels.
+                  Je suis aussi un photographe professionnel qui aime capturer des souvenirs et des moments uniques.
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6 justify-center lg:justify-start">
                   <span className="px-3 py-1 bg-gray-200/70 text-gray-700 rounded-full text-sm">
-                    Full-Stack Developer
+                    Développeur full-stack
                   </span>
                   <span className="px-3 py-1 bg-gray-200/70 text-gray-700 rounded-full text-sm">
-                    UI/UX Designer
+                    Designer UI/UX
                   </span>
                   <span className="px-3 py-1 bg-gray-200/70 text-gray-700 rounded-full text-sm">
-                    Creative Coder
+                    Photographe professionnel
                   </span>
                 </div>
 
@@ -51,13 +49,13 @@ export default function NotFound() {
                     href="/"
                     className="px-5 py-2.5 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors text-sm"
                   >
-                    Take Me Home
+                    Retour à l'accueil
                   </Link>
                   <Link
                     href="/contact"
                     className="px-5 py-2.5 bg-white/80 text-gray-900 rounded-lg font-medium border border-gray-300 hover:bg-white transition-colors text-sm"
                   >
-                    Get In Touch
+                    Contactez-moi
                   </Link>
                 </div>
               </div>

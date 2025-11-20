@@ -1,63 +1,52 @@
 "use client"
 
-import type React from "react"
-
+import React from "react"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 
 interface RotationCarouselProps {
   children: React.ReactNode
-  speed?: number // Duration in seconds for one complete loop (lower = faster)
+  speed?: number
   className?: string
 }
 
-export function SlidingCarousel({ children, speed = 20, className }: RotationCarouselProps) {
+export function SlidingCarousel({ children, speed = 8, className }: RotationCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null)
-  const group1Ref = useRef<HTMLDivElement>(null)
-  const group2Ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const container = containerRef.current
-    const group1 = group1Ref.current
-    const group2 = group2Ref.current
+    if (!container) return
 
-    if (!container || !group1 || !group2) return
+    const firstGroup = container.querySelector(".carousel-group") as HTMLDivElement
+    if (!firstGroup) return
 
-    const groupWidth = group1.offsetWidth
+    const groupWidth = firstGroup.offsetWidth + 8 // Adding margin between groups
 
-    // Position groups side by side
-    gsap.set(group1, { x: 0 })
-    gsap.set(group2, { x: groupWidth })
-
-    // Create infinite timeline that moves both groups to the left
     const animation = gsap.timeline({
       repeat: -1,
-      onRepeat: () => {
-        // Reset positions when animation completes one cycle
-        gsap.set(group1, { x: 0 })
-        gsap.set(group2, { x: groupWidth })
-      },
     })
 
-    // Animate both groups to move left by groupWidth
-    animation.to([group1, group2], {
-      x: `-=${groupWidth}`,
-      duration: speed,
-      ease: "none",
-    })
+    animation
+      .to(container, {
+        x: -groupWidth,
+        duration: speed,
+        ease: "none",
+      })
+      .set(container, { x: 0 }, speed)
 
     return () => {
       animation.kill()
+      gsap.set(container, { x: 0 })
     }
   }, [speed, children])
 
   return (
     <div className={"relative overflow-hidden " + className}>
-      <div ref={containerRef} className="flex">
-        <div ref={group1Ref} className="flex">
+      <div ref={containerRef} className="flex flex-row">
+        <div className="carousel-group flex space-x-2 mr-2 flex-shrink-0">
           {children}
         </div>
-        <div ref={group2Ref} className="flex">
+        <div className="flex space-x-2 flex-shrink-0">
           {children}
         </div>
       </div>

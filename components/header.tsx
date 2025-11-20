@@ -26,12 +26,16 @@ export default function Header() {
     
     return (
         <header className="fixed top-4 flex flex-row justify-between items-center z-1000 w-screen px-15">
-            <Link href="/" className="flex flex-row justify-center items-center space-x-3 text-4xl text-bold" scroll={false}>
-                <Image className="h-11 w-auto" height={1736} width={2036} src="/logo.webp" alt="" />
-                <h1 className={`text-black transition-transform duration-500 ease-in-out ${scrolledDown ? 'transform -translate-y-20' : 'transform translate-y-0'}`}>
-                    Arts & TIC
-                </h1>
-            </Link>
+            <div className="flex flex-row justify-center items-center">
+                <Link href="/">
+                    <Image className="h-11 w-auto" height={1736} width={2036} src="/logo.webp" alt="" />
+                </Link>
+                <Link href="/" className={`${scrolledDown ? 'transform -translate-y-20' : 'transform translate-y-0'} transition-transform duration-500 ease-in-out`}>
+                    <h1 className="text-4xl text-bold text-black transition-transform duration-500 ease-in-out pl-3">
+                        Arts & TIC
+                    </h1>
+                </Link>
+            </div>
             <div className={`text-black transition-transform duration-600 ease-in-out ${scrolledDown ? 'transform -translate-y-20' : 'transform translate-y-0'}`}>
                 <ul className="flex flex-row justify-center items-center space-x-8 text-lg text-bold">
                     <li>
