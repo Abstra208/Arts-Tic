@@ -27,7 +27,7 @@ export default function NotFound() {
                 </h1>
                 
                 <p className="text-base text-gray-600 mb-5 leading-relaxed">
-                  Je suis l'étudiant derrière ce site et souvenirs figés grâce à mes photos.
+                  Je suis l&apos;étudiant derrière ce site et souvenirs figés grâce à mes photos.
                   Je suis un étudiant canadien avec une passion pour le développement web, je suis spécialisé pour créer des sites web esthétiquement agréables et fonctionnels.
                   Je suis aussi un photographe professionnel qui aime capturer des souvenirs et des moments uniques.
                 </p>
@@ -49,7 +49,7 @@ export default function NotFound() {
                     href="/"
                     className="px-5 py-2.5 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors text-sm"
                   >
-                    Retour à l'accueil
+                    Retour à l&apos;accueil
                   </Link>
                   <Link
                     href="/contact"

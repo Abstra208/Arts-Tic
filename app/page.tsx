@@ -34,7 +34,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className='flex flex-col items-center after:content-[""] w-full'>
-                    <p className='text-xl text-center'>Pour plus d'information sur les niveaux et choix de parcours:</p>
+                    <p className='text-xl text-center'>Pour plus d&apos;information sur les niveaux et choix de parcours:</p>
                     <SlideButton link="/niveaux" text="Visiter la page des niveaux" openedDefault={true} />
                 </div>
             </section>
@@ -57,7 +57,7 @@ export default function Page() {
             </section>
             <section className="h-screen w-screen px-15">
                 <h1 className='text-4xl md:text-5xl font-bold text-center mb-4 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Avez-vous le temps pour une vidéo?</h1>
-                <p className='text-xl text-center mb-4'>Cette vidéo est un projet réalisé par d'ancien élèves de la concentration.</p>
+                <p className='text-xl text-center mb-4'>Cette vidéo est un projet réalisé par d&apos;anciens élèves de la concentration.</p>
                 <video
                     className="w-full h-auto object-cover rounded-2xl"
                     autoPlay controls muted loop playsInline preload="none"
