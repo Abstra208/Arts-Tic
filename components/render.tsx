@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import GSAPSmootherProvider from "@/components/GSAPSmootherProvider";
+import Footer from "@/components/footer";
 
 export default function Render({
     className,
@@ -26,10 +27,13 @@ export default function Render({
             {isMobile == true ? (
                 <div className={`${className}`}>
                     {children}
+                    <Footer />
                 </div>
+                
             ) : (
                 <GSAPSmootherProvider className={`${className}`} >
                     {children}
+                    <Footer />
                 </GSAPSmootherProvider>
             )}
         </>
