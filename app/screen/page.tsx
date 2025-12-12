@@ -168,7 +168,7 @@ export default function Screen() {
                 <input type="text" id='url' value={url} onChange={(e) => { setUrl(e.target.value); getScreenProps(); }} />
                 {wrongURL? <span style={{ color: 'red' }}>{wrongURL}</span> : null}
                 <label htmlFor="mdp">Mot de passe</label>
-                <input type="text" id='mdp' placeholder="Mot de passe" />
+                <input type="password" id='mdp' placeholder="Mot de passe" />
                 {wrongMDP? <span style={{ color: 'red' }}>Mot de passe incorrect</span> : null}
             </div>
             <div>
