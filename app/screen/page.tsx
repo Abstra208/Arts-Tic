@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { ColorPicker } from 'antd';
 import axios from 'axios';
-import { Metadata } from "next";
 
 interface ScreenProps {
     mode: string,
