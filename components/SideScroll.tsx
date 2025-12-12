@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -54,7 +54,7 @@ const SideScrollBody = ({ className, children }: BodyProps) => {
 
 const SideScroll = ({ className, children }: SideScrollProps) => {
     useEffect(() => {
-        let sections = gsap.utils.toArray(".side-scroll-group" as any);
+        const sections = gsap.utils.toArray<HTMLElement>(".side-scroll-group");
         console.log("sections", sections);
 
         const ctx = gsap.context(() => {
