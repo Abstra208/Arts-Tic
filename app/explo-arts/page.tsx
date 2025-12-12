@@ -1,61 +1,55 @@
 import Carousel from "@/components/carousel";
+import HeroArts from "@/components/heroArts";
+import { SideScroll, SideScrollBody, SideScrollGroup, SideScrollHeader } from "@/components/SideScroll";
+import { Metadata } from "next";
 import Image from "next/image";
-import { Suspense } from "react";
 
 export default function ArtsPage() {
     return (
         <div className="flex flex-col items-center justify-center">
-            <section className="h-[50svh] flex flex-col justify-center items-center">
-                <h1 className="text-xl md:text-2xl">Parcours</h1>
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">Explo Arts</h1>
-            </section>
-            <section className="w-full h-full text-black flex flex-col items-center justify-center relative">
-                <Suspense fallback={<div>Loading video...</div>}>
-                    <video autoPlay controls muted loop playsInline preload="none" controlsList="nodownload nofullscreen noremoteplayback" className="arts-vid w-full h-auto">
-                        <source src="/videos/arts-broll.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </Suspense>
-            </section>
-            <section className="w-full px-15">
-                <div className="w-full flex flex-col">
-                    <h1 className="text-5xl text-bold">Étape un: Apprentissage</h1>
-                    <p className="text-2xl w-[70%]">Avant chaque projet, de nouvelles compétences sont apprises en même temps que le nouveau projet!</p>
+            <HeroArts />
+            {/*<Carousel style="2" className="pt-12">
+                <div className="p-6 bg-gray-100">
+                    <h1 className="text-2xl text-bold">Étape un: Apprentissage</h1>
+                    <p className="text-xl w-[70%]">Avant chaque projet, de nouvelles compétences sont apprises en même temps que le nouveau projet!</p>
+                    <Image src="/images/explo-art/DSC00975.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
                 </div>
-                <ul className="flex flex-row">
-                    <li>
-                        <Image src="/images/explo-art/DSC00975.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
-                        <p>Apprentissage du cercle chromatique</p>
-                    </li>
-                </ul>
-            </section>
-            <section className="w-full px-15 flex flex-col justify-end text-end">
-                <div className="w-full flex flex-col items-end">
-                    <h1 className="text-5xl text-bold">Étape deux: Place à l&apos;art!</h1>
-                    <p className="text-2xl w-[70%]">Lorsque tout est bien compris, les élèves peuvent commencer à créer leurs œuvres d&apos;art!</p>
+                <div className="p-6 bg-gray-100">
+                    <h1 className="text-2xl text-bold">Étape deux: Place à l&apos;art!</h1>
+                    <p className="text-xl w-[70%]">Lorsque tout est bien compris, les élèves peuvent commencer à créer leurs œuvres d&apos;art!</p>
+                    <Image src="/images/explo-art/DSC00976.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
                 </div>
-                <ul className="flex flex-row justify-end">
-                    <li>
-                        <Image src="/images/explo-art/DSC00976.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
-                        <p>Création d&apos;œuvres d&apos;art uniques</p>
-                    </li>
-                </ul>
-            </section>
-            <section className="w-full px-15">
-                <div className="w-full flex flex-col">
-                    <h1 className="text-5xl text-bold">Étape trois: Affichage</h1>
-                    <p className="text-2xl w-[70%]">Une fois les œuvres d&apos;art créées, les élèves peuvent afficher fièrement leurs créations dans le hall de l&apos;école ou dans les locales d&apos;arts!</p>
+                <div className="p-6 bg-gray-100">
+                    <h1 className="text-2xl text-bold">Étape trois: Affichage</h1>
+                    <p className="text-xl w-[70%]">Une fois les œuvres d&apos;art créées, les élèves peuvent afficher fièrement leurs créations dans le hall de l&apos;école ou dans les locales d&apos;arts!</p>
+                    <Image src="/images/explo-art/DSC00977.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
                 </div>
-                <ul className="flex flex-row">
-                    <li>
-                        <Image src="/images/explo-art/DSC00977.jpg" width={1080} height={1080} className="w-auto h-full object-cover" alt="" />
-                        <p>Affichage d&apos;un projet dans le hall de l&apos;école</p>
-                    </li>
-                </ul>
-            </section>
+            </Carousel>*/}
+            <SideScroll className="py-10 h-screen">
+                <SideScrollHeader>
+                    <h1 className='text-4xl md:text-5xl font-bold text-center relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Comment ça fonctionne?</h1>
+                </SideScrollHeader>
+                <SideScrollBody>
+                    <SideScrollGroup className="h-[70vh] w-[75vw] p-6 bg-gray-100">
+                        <h1 className="text-2xl text-bold">Étape un: Apprentissage</h1>
+                        <p className="text-xl w-[70%]">Avant chaque projet, de nouvelles compétences sont apprises en même temps que le nouveau projet!</p>
+                        <Image src="/images/explo-art/DSC00975.jpg" width={1080} height={1080} className="w-auto h-35 object-cover" alt="" />
+                    </SideScrollGroup>
+                    <SideScrollGroup className="h-[70vh] w-[75vw] p-6 bg-gray-100">
+                        <h1 className="text-2xl text-bold">Étape deux: Place à l&apos;art!</h1>
+                        <p className="text-xl w-[70%]">Lorsque tout est bien compris, les élèves peuvent commencer à créer leurs œuvres d&apos;art!</p>
+                        <Image src="/images/explo-art/DSC00976.jpg" width={1080} height={1080} className="w-auto h-35 object-cover" alt="" />
+                    </SideScrollGroup>
+                    <SideScrollGroup className="h-[70vh] w-[75vw] p-6 bg-gray-100">
+                        <h1 className="text-2xl text-bold">Étape trois: Affichage</h1>
+                        <p className="text-xl w-[70%]">Une fois les œuvres d&apos;art créées, les élèves peuvent afficher fièrement leurs créations dans le hall de l&apos;école ou dans les locales d&apos;arts!</p>
+                        <Image src="/images/explo-art/DSC00977.jpg" width={1080} height={1080} className="w-auto h-35 object-cover" alt="" />
+                    </SideScrollGroup>
+                </SideScrollBody>
+            </SideScroll>
             <section className=" my-10">
                 <h1>Projets</h1>
-                <Carousel slidesToShow={3} autoSlide>
+                <Carousel style="1" slidesToShow={3} autoSlide>
                     <Image src="/images/projets/mode.jpg" width={1920} height={1080} className="w-auto h-full object-cover" alt="" />
                     <Image src="/images/projets/maquette.jpg" width={1920} height={1080} className="w-auto h-full object-cover" alt="" />
                     <Image src="/images/projets/soulier.jpg" width={1920} height={1080} className="w-auto h-full object-cover" alt="" />
@@ -65,7 +59,7 @@ export default function ArtsPage() {
             </section>
             <section className="w-full my-10">
                 <h1>Locales</h1>
-                <Carousel>
+                <Carousel style="3">
                     <Image src="/images/classe/back.png" width={1920} height={1080} className="w-auto h-full object-cover" alt="" />
                     <Image src="/images/classe/back.png" width={1920} height={1080} className="w-auto h-full object-cover" alt="" />
                     <Image src="/images/classe/back.png" width={1920} height={1080} className="w-auto h-full object-cover" alt="" />
@@ -73,4 +67,14 @@ export default function ArtsPage() {
             </section>
         </div>
     );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Explo Arts - Arts & TIC",
+    openGraph: {
+      title: "Explo Arts - Arts & TIC",
+      images: ["/images/hero.jpg"],
+    },
+  };
 }

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ColorPicker } from 'antd';
 import axios from 'axios';
+import { Metadata } from "next";
 
 interface ScreenProps {
     mode: string,
@@ -31,7 +32,7 @@ interface ModeProps {
 
 export default function Screen() {
     const [screenProps, setScreenProps] = useState<ScreenProps>();
-    const [url, setUrl] = useState('localhost:80');
+    const [url, setUrl] = useState('10.61.16.78:80');
     const [modes, setModes] = useState<ModeProps[]>([]);
     const [color, setColor] = useState('rgb(255, 255, 255)');
     const [mdpInput, setMdpInput] = useState<HTMLInputElement | null>(null);
@@ -45,6 +46,7 @@ export default function Screen() {
     }, []);
     
     async function getScreenProps() {
+        setWrongURL(null);
         try {
             const response = await axios.get(`http://${url}/currData`);
             const screenProps = response.data;
@@ -164,7 +166,7 @@ export default function Screen() {
         <div className='flex w-screen h-screen justify-center items-center flex-col'>
             <div>
                 <label htmlFor="url">URL</label>
-                <input type="text" id='url' value={url} onChange={(e) => setUrl(e.target.value)} />
+                <input type="text" id='url' value={url} onChange={(e) => { setUrl(e.target.value); getScreenProps(); }} />
                 {wrongURL? <span style={{ color: 'red' }}>{wrongURL}</span> : null}
                 <label htmlFor="mdp">Mot de passe</label>
                 <input type="text" id='mdp' placeholder="Mot de passe" />

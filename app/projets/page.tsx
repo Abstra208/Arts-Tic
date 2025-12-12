@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 export const dynamic = 'force-dynamic';
 
@@ -40,4 +41,14 @@ export default async function Projets() {
             </div>
         </div>
     );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Projets - Arts & TIC",
+    openGraph: {
+      title: "Projets - Arts & TIC",
+      images: ["/images/og-image.jpg"],
+    },
+  };
 }

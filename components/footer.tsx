@@ -1,16 +1,22 @@
-import SlideButton from "@/components/slidebutton";
 import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-gray-100 py-6 mt-12">
-            <div>
-                <p>Une réalisation étudiante par Ludovic</p>
-                <Link href="/screen">Controle d&apos;écran</Link>
+        <footer className="w-full px-6 md:px-15 bg-gray-100 py-5 mt-16">
+            <div className="flex flex-col md:flex-row justify-between pb-4">
+                <div className="mb-2 md:mb-0">
+                    <h1 className='text-2xl md:text-4xl text-left font-bold'>Avez-vous des<br />questions? <a className="text-blue-600" target="_blank" href="https://ecole-secondairedelacamaradiere.cssc.gouv.qc.ca/nous-joindre">Contacter nous!</a></h1>
+                </div>
+                <div>
+                    <ul>
+                        <li><Link href="/screen">Controle d&apos;écran</Link></li>
+                    </ul>
+                </div>
             </div>
-            <div className="flex flex-col justify-center items-center">
-                <h1 className='text-4xl md:text-5xl font-bold text-center mb-4 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Avez-vous des questions ?</h1>
-                <SlideButton link="https://ecole-secondairedelacamaradiere.cssc.gouv.qc.ca/nous-joindre" text="Contacter nous!" size='large' openedDefault={true} target="_blank" />
+            <div className="w-full h-0.5 bg-blue-600" />
+            <div className="flex flex-col md:flex-row justify-between pt-4 text-md text-gray-600">
+                <p>© 2025 <a className="text-blue-600" target="_blank" href="https://crealab.ca">CréaLab</a>. Tous droits réservés.</p>
+                <p>Une réalisation étudiante par <a className="text-blue-600" target="_blank" href="https://abstra208.com">Ludovic</a></p>
             </div>
         </footer>
     );

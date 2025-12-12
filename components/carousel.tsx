@@ -4,16 +4,20 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 type CarouselProps = {
     children: ReactNode;
+    className?: string;
     autoSlide?: boolean;
     autoSlideInterval?: number;
     slidesToShow?: 1 | 2 | 3 | 4 | 5;
+    style: "1" | "2" | "3"; /* 1 - Default, 2 - Smaller side, 3 - Full width */
 };
 
 export default function Carousel({
     children,
+    className = '',
     autoSlide = false,
     autoSlideInterval = 5000,
-    slidesToShow = 1
+    slidesToShow = 1,
+    style = "1",
 }: CarouselProps) {
     const [curr, setCurr] = useState(0);
     
@@ -59,17 +63,41 @@ export default function Carousel({
     }, [resetAutoSlideTimer, maxIndex]);
 
     return (
-        <div className="relative overflow-hidden">
+        <div className={`relative overflow-hidden ${className}`}>
             <div 
-                className="flex transition-transform ease-out duration-800"
-                style={{ transform: `translateX(-${curr * (100 / slidesToShow)}%)` }}
+                className="flex transition-transform ease-in-out duration-800"
+                style={style === "1" ? { transform: `translateX(-${curr * (100 / slidesToShow)}%)` } : style === "2" ? { transform: `translateX(-${curr * (70)}%)` } : style === "3" ? { transform: `translateX(-${curr * (100)}%)` } : {}}
             >
-                {Children.map(children, (child, index) => (
+                {style === "1" && Children.map(children, (child, index) => (
                     <div 
-                        key={index} 
+                        key={index}
                         className={`flex-shrink-0`} 
                         style={{ 
                             width: `${100 / slidesToShow}%`
+                        }}
+                    >
+                        {child}
+                    </div>
+                ))}
+                {style === "2" && Children.map(children, (child, index) => (
+                    <div 
+                        key={index}
+                        className={`flex-shrink-0`} 
+                        style={{ 
+                            width: `${70}%`,
+                            transform: `scale(${index >= curr && index < curr + slidesToShow ? 1 : 0.8})`,
+                            transition: 'transform 0.5s ease'
+                        }}
+                    >
+                        {child}
+                    </div>
+                ))}
+                {style === "3" && Children.map(children, (child, index) => (
+                    <div 
+                        key={index}
+                        className={`flex-shrink-0`} 
+                        style={{ 
+                            width: `${100}%`
                         }}
                     >
                         {child}
