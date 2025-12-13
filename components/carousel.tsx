@@ -71,7 +71,7 @@ export default function Carousel({
                 {style === "1" && Children.map(children, (child, index) => (
                     <div 
                         key={index}
-                        className={`flex-shrink-0`} 
+                        className={`shrink-0`} 
                         style={{ 
                             width: `${100 / slidesToShow}%`
                         }}
@@ -82,7 +82,7 @@ export default function Carousel({
                 {style === "2" && Children.map(children, (child, index) => (
                     <div 
                         key={index}
-                        className={`flex-shrink-0`} 
+                        className={`shrink-0`} 
                         style={{ 
                             width: `${70}%`,
                             transform: `scale(${index >= curr && index < curr + slidesToShow ? 1 : 0.8})`,
@@ -95,7 +95,7 @@ export default function Carousel({
                 {style === "3" && Children.map(children, (child, index) => (
                     <div 
                         key={index}
-                        className={`flex-shrink-0`} 
+                        className={`shrink-0`} 
                         style={{ 
                             width: `${100}%`
                         }}

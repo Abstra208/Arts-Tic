@@ -44,14 +44,14 @@ export function SlidingCarousel({ children, speed = 8, className }: RotationCaro
   return (
     <div className={`overflow-hidden ${className}`}>
       <div ref={containerRef} className="flex flex-row h-full w-full">
-        <div className="carousel-group flex space-x-2 md:space-x-2 mr-2 md:mr-2 flex-shrink-0 h-full w-auto">
+        <div className="carousel-group flex space-x-2 md:space-x-2 mr-2 md:mr-2 shrink-0 h-full w-auto">
           {React.Children.map(children, (child) => (
             <div className="flex w-70 md:w-140">
               {child}
             </div>
           ))}
         </div>
-        <div className="flex space-x-2 md:space-x-2 flex-shrink-0 h-full">
+        <div className="flex space-x-2 md:space-x-2 shrink-0 h-full">
           {React.Children.map(children, (child) => (
             <div className="flex w-70 md:w-140">
               {child}

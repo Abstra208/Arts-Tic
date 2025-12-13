@@ -30,7 +30,7 @@ interface BodyProps {
 
 const SideScrollGroup = ({ children, className }: GroupProps) => {
     return (
-        <div className={`side-scroll-group h-[80vh] flex-shrink-0 ${className}`}>
+        <div className={`side-scroll-group h-[80vh] shrink-0 ${className}`}>
             {children}
         </div>
     );
@@ -38,7 +38,7 @@ const SideScrollGroup = ({ children, className }: GroupProps) => {
 
 const SideScrollHeader = ({ className, children }: HeaderProps) => {
     return (
-        <div className={`side-scroll-header w-full flex-shrink-0 mb-6 ${className}`}>
+        <div className={`side-scroll-header w-full shrink-0 mb-6 ${className}`}>
             {children}
         </div>
     );
@@ -46,7 +46,7 @@ const SideScrollHeader = ({ className, children }: HeaderProps) => {
 
 const SideScrollBody = ({ className, children }: BodyProps) => {
     return (
-        <div className={`side-scroll-body w-full flex flex-row flex-shrink-0 mb-6 ${className}`}>
+        <div className={`side-scroll-body w-full flex flex-row shrink-0 mb-6 ${className}`}>
             {children}
         </div>
     );
