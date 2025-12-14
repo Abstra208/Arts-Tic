@@ -27,7 +27,7 @@ export default function ArtsPage() {
             </Carousel>*/}
             <SideScroll className="py-10 h-screen">
                 <SideScrollHeader>
-                    <h1 className='text-4xl md:text-5xl font-bold text-center relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Comment ça fonctionne?</h1>
+                    <h1 className='text-4xl md:text-5xl font-bold text-center relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Les étapes de la production</h1>
                 </SideScrollHeader>
                 <SideScrollBody>
                     <SideScrollGroup className="h-[70vh] w-[75vw] p-6 bg-gray-100">

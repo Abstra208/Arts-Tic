@@ -5,19 +5,32 @@ import Render from "@/components/render";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Arts & TIC',
+  title: {
+    default: 'Arts & TIC',
+    template: '%s - Arts & TIC',
+  },
   description: 'Une concentration de La Camaradière.',
+  keywords: ['Arts', 'TIC', 'Arts et TIC', 'Arts & TIC', 'La Camaradière', 'concentration', 'éducation', 'créativité', 'technologie'],
+  authors: [{ name: 'Ludovic' }],
+  creator: 'Ludovic',
+  publisher: 'CreaLab',
+  metadataBase: new URL('https://artstic.crealab.ca'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
+    type: 'website',
+    locale: 'fr_CA',
     title: 'Arts & TIC',
     description: 'Une concentration de La Camaradière.',
     siteName: 'Arts & TIC',
     url: 'https://artstic.crealab.ca',
     images: [
       {
-        url: 'https://artstic.crealab.ca/images/hero.jpg',
+        url: '/images/hero.jpg',
         width: 2048,
         height: 1475,
-        alt: 'Arts & TIC',
+        alt: 'Arts & TIC - Une concentration de La Camaradière',
       },
     ],
   },
@@ -25,7 +38,18 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Arts & TIC',
     description: 'Une concentration de La Camaradière.',
-    images: ['https://artstic.crealab.ca/images/hero.jpg'],
+    images: ['/images/hero.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

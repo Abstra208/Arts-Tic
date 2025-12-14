@@ -46,7 +46,7 @@ const SideScrollHeader = ({ className, children }: HeaderProps) => {
 
 const SideScrollBody = ({ className, children }: BodyProps) => {
     return (
-        <div className={`side-scroll-body w-full flex flex-row shrink-0 mb-6 ${className}`}>
+        <div className={`side-scroll-body w-full flex flex-row shrink-0 mb-6 gap-10 ${className}`}>
             {children}
         </div>
     );
