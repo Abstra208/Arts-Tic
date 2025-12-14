@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     default: 'Arts & TIC',
     template: '%s - Arts & TIC',
   },
-  description: 'Une concentration de La Camaradière.',
-  keywords: ['Arts', 'TIC', 'Arts et TIC', 'Arts & TIC', 'La Camaradière', 'concentration', 'éducation', 'créativité', 'technologie'],
+  description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CreaLab.',
+  keywords: ['Arts', 'TIC', 'Arts et TIC', 'Arts & TIC', 'La Camaradière', 'école secondaire', 'concentration', 'Concentration Arts et TIC', 'éducation', 'créativité', 'technologie'],
   authors: [{ name: 'Ludovic' }],
   creator: 'Ludovic',
   publisher: 'CreaLab',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_CA',
     title: 'Arts & TIC',
-    description: 'Une concentration de La Camaradière.',
+    description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CreaLab.',
     siteName: 'Arts & TIC',
     url: 'https://artstic.crealab.ca',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Arts & TIC',
-    description: 'Une concentration de La Camaradière.',
+    description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CreaLab.',
     images: ['/images/hero.jpg'],
   },
   robots: {
