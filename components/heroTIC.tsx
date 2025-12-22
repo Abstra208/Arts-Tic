@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function HeroTIC() {
     return (
         <section className="w-full h-auto">
-            <div className="h-[40svh] md:h-[50svh] flex flex-col justify-center items-center text-center relative">
+            <div className="h-[45svh] md:h-[50svh] flex flex-col justify-center items-center text-center relative">
                 <h1 className="text-xl md:text-2xl">Parcours</h1>
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">TIC et Créativité</h1>
                 <Image src="/images/tic/DSC01607.png" width={1920} height={1080} className="absolute bottom-0 right-0 h-15 md:h-30 w-auto" alt="" />
