@@ -32,27 +32,26 @@ export default function Header() {
         const links = document.querySelectorAll('.mobile-nav-link');
         if (MobileOpened) {
             gsap.fromTo(
-            links,
-            { opacity: 0, y: 50, rotateX: -45, scale: 0.95 },
-            { 
-                opacity: 1, 
-                y: 0, 
-                rotateX: 0, 
-                scale: 1,
-                duration: 0.7, 
-                stagger: 0.08, 
-                ease: 'power3.out',
-                clearProps: 'transform'
-            }
+                links, { opacity: 0, y: 50, rotateX: -45, scale: 0.95 },
+                {
+                    opacity: 1, 
+                    y: 0, 
+                    rotateX: 0, 
+                    scale: 1,
+                    duration: 0.7, 
+                    stagger: 0.08, 
+                    ease: 'power3.out',
+                    clearProps: 'transform'
+                }
             );
         } else {
-            gsap.to(links, { 
-            opacity: 0, 
-            y: 20, 
-            scale: 0.98,
-            duration: 0.25, 
-            stagger: 0.03,
-            ease: 'power2.in'
+            gsap.to(links, {
+                opacity: 0, 
+                y: 20, 
+                scale: 0.98,
+                duration: 0.25, 
+                stagger: 0.03,
+                ease: 'power2.in'
             });
         }
     }, [MobileOpened]);
