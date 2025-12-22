@@ -18,14 +18,14 @@ export default async function Projets() {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold mb-8">Projets Page</h1>
-            <p className="text-lg text-center max-w-2xl">
-                Bienvenue sur la page des projets. Ici, vous trouverez des informations sur les différents projets que nous avons réalisés dans le cadre du programme Arts & TIC.
-            </p>
+            <div className="h-[50svh] flex flex-col justify-center items-center text-center">
+                <h1 className="text-xl md:text-2xl">Affichage</h1>
+                <h1 className="text-4xl md:text-6xl font-bold mb-4">Projets</h1>
+            </div>
             <div className="w-screen">
                 <div className="grid grid-cols-3 gap-0 w-full">
                     {Object.values(blobs.data).map((blob: Blob) => (
-                        <div key={blob.url} className="relative w-full overflow-hidden group" style={{ aspectRatio: '1 / 1' }}>
+                        <div key={blob.url} className="relative w-full overflow-hidden group" style={{ aspectRatio: '1 / 1.5' }}>
                             <Image
                                 src={blob.url}
                                 alt={blob.pathname}

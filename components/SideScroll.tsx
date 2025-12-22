@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -53,7 +54,7 @@ const SideScrollBody = ({ className, children }: BodyProps) => {
 }
 
 const SideScroll = ({ className, children }: SideScrollProps) => {
-    useEffect(() => {
+    useGSAP(() => {
         const sections = gsap.utils.toArray<HTMLElement>(".side-scroll-group");
         console.log("sections", sections);
 
@@ -67,7 +68,6 @@ const SideScroll = ({ className, children }: SideScrollProps) => {
                     pin: true,
                     scrub: 1,
                     end: `+=${scrollerWrapper?.offsetWidth ? scrollerWrapper.offsetWidth * 2 : 0}`,
-                    markers: true,
                     pinSpacing: true,
                 }
             });

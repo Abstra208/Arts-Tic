@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <div>
             <Hero />
-            <section className='mt-16 px-6 md:px-15 w-full'>
+            <section className='mt-16 px-4 md:px-15 w-full'>
                 <div className='flex items-center flex-col'>
                     <h1 className='text-4xl md:text-5xl font-bold text-center relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Plus qu&apos;un simple programme</h1>
                     <p className='text-xl text-center mt-4'>Avec deux differents parcours disponible pour les élèves.</p>
@@ -28,24 +28,23 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <section className='mt-16'>
+            <section className='mt-16 relative'>
                 <h1 className='text-4xl md:text-5xl font-bold text-center mb-4 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Plus intéressé à voir ce que l&apos;on fait?</h1>
                 <p className='text-xl text-center mb-4'>On vous comprend. En voici quelques exemples :</p>
-                <SlidingCarousel speed={10} className='h-[40vh] md:h-[90vh] w-full'>
+                <SlidingCarousel speed={10} className='h-[50vh] md:h-[90vh] w-full'>
                     <Image src="/images/projets/maquette2.jpg" width={500} height={500} className='w-full object-cover' alt="Projet Explo Arts" />
                     <Image src="/images/projets/aquaurabaine.jpg" width={500} height={500} className='w-full object-cover' alt="Projet CréaLab" />
                     <Image src="/images/projets/soulier2.jpg" width={500} height={500} className='w-full object-cover' alt="Projet CréaLab" />
                     <Image src="/images/projets/maquette.jpg" width={500} height={500} className='w-full object-cover' alt="Projet Explo Arts" />
                 </SlidingCarousel>
-                <div className='flex flex-col items-center mt-10 after:content-[""]'>
-                    <p className='text-3xl text-bold text-center'>Vous voulez en voir plus?</p>
-                    <SlideButton link="/projets" text="Cliquer ici!" size='large' openedDefault={true} />
+                <div className='flex flex-col items-center mt-10 after:content-[""] absolute bottom-5 md:bottom-10 left-0 right-0'>
+                    <SlideButton link="/projets" text="Voir plus!" size='large' />
                 </div>
             </section>
             <section className="mt-16 h-[35vh] md:h-[70vh]">
                 <Image src="/images/arts.png" width={1920} height={1080} alt="" className="w-full h-full object-cover" />
             </section>
-            <section className="mt-16 h-auto w-screen px-6 md:px-15">
+            <section className="mt-16 h-auto w-screen px-4 md:px-15">
                 <h1 className='text-4xl md:text-5xl font-bold text-center mb-4 relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Avez-vous le temps pour une vidéo?</h1>
                 <p className='text-xl text-center mb-4'>Cette vidéo est un projet réalisé par d&apos;anciens élèves de la concentration.</p>
                 <video

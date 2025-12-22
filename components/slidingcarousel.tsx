@@ -3,6 +3,7 @@
 import React from "react"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
 
 interface RotationCarouselProps {
   children: React.ReactNode
@@ -13,7 +14,7 @@ interface RotationCarouselProps {
 export function SlidingCarousel({ children, speed = 8, className }: RotationCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  useGSAP(() => {
     const container = containerRef.current
     if (!container) return
 

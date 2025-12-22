@@ -76,7 +76,7 @@ export default function AvatarUploadPage() {
                 <ul className='h-32 overflow-x-auto flex flex-row gap-2 border-2 border-gray-300'>
                   {images.map((img, index) => (
                     <li key={index} className='shrink-0'>
-                      <Image src={img.src} alt={`Image ${index}`} className='h-32 w-auto object-cover' />
+                      <Image src={img.src} width={200} height={200} alt={`Image ${index}`} className='h-32 w-auto object-cover' />
                     </li>
                   ))}
                 </ul>

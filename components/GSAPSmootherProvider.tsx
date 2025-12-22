@@ -3,6 +3,7 @@
 
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { usePathname } from "next/navigation";
@@ -26,7 +27,7 @@ export default function GSAPSmootherProvider({
     const pathname = usePathname();
 
     // Effect to initialize/re-initialize ScrollSmoother
-    useEffect(() => {
+    useGSAP(() => {
         // Always create ScrollSmoother to maintain its environment
         ctx = gsap.context(() => {
             if (smootherWrapperRef.current && smootherContentRef.current) {
