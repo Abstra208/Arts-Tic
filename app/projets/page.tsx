@@ -3,22 +3,7 @@ import { Suspense } from "react";
 import HeroProjects from "@/components/heroProjects";
 import ProjectsGrid from "@/components/projectsgrid";
 
-interface Blobs {
-    [key: string]: Blob;
-}
-
-interface Blob {
-    url: string;
-    year: number;
-    title: string;
-    project: string;
-    pathname: string;
-}
-
 export default async function Projets() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projets`, { cache: 'no-store' });
-    const blobs: Blobs = await res.json();
-
     return (
         <div className="flex flex-col items-center justify-center">
             <HeroProjects />
