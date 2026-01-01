@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://arts-tic.crealab.com'
+    const baseUrl = 'https://arts-tic.crealab.ca'
     return [
         {
             url: baseUrl,

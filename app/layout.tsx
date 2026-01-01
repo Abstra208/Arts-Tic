@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Ludovic' }],
   creator: 'Ludovic',
   publisher: 'CreaLab',
-  metadataBase: new URL('https://artstic.crealab.ca'),
+  metadataBase: new URL('https://arts-tic.crealab.ca'),
   alternates: {
     canonical: '/',
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Arts & TIC',
     description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CreaLab.',
     siteName: 'Arts & TIC',
-    url: 'https://artstic.crealab.ca',
+    url: 'https://arts-tic.crealab.ca',
     images: [
       {
         url: '/images/hero.jpg',
