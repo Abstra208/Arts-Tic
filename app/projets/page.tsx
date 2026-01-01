@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Projets - Arts & TIC",
     openGraph: {
       title: "Projets - Arts & TIC",
-      images: ["/images/og-image.jpg"],
+      images: ["/images/hero.jpg"],
     },
   };
 }
