@@ -8,7 +8,8 @@ type CarouselProps = {
     autoSlide?: boolean;
     autoSlideInterval?: number;
     slidesToShow?: 1 | 2 | 3 | 4 | 5;
-    style: "1" | "2" | "3"; /* 1 - Default, 2 - Smaller side, 3 - Full width */
+    style: "1" | "2" | "3" | "4"; /* 1 - Default, 2 - Smaller side, 3 - Full width, 4 - Items showcase */
+    dot?: "white" | "black";
 };
 
 export default function Carousel({
@@ -18,6 +19,7 @@ export default function Carousel({
     autoSlideInterval = 5000,
     slidesToShow = 1,
     style = "1",
+    dot = "white"
 }: CarouselProps) {
     const [curr, setCurr] = useState(0);
     
@@ -25,7 +27,7 @@ export default function Carousel({
     const childCount = childrenArray.length;
     const maxIndex = Math.max(0, childCount - slidesToShow);
 
-    const slideIntervalRef = useCallback((ref: React.MutableRefObject<NodeJS.Timeout | null>) => {
+    const slideIntervalRef = useCallback((ref: React.RefObject<NodeJS.Timeout | null>) => {
         return {
             set: () => {
                 if (ref.current) clearInterval(ref.current);
@@ -63,10 +65,10 @@ export default function Carousel({
     }, [resetAutoSlideTimer, maxIndex]);
 
     return (
-        <div className={`relative overflow-hidden ${className}`}>
+        <div className={`relative overflow-hidden pointer-events-auto ${className}`}>
             <div 
                 className="flex transition-transform ease-in-out duration-800"
-                style={style === "1" ? { transform: `translateX(-${curr * (100 / slidesToShow)}%)` } : style === "2" ? { transform: `translateX(-${curr * (70)}%)` } : style === "3" ? { transform: `translateX(-${curr * (100)}%)` } : {}}
+                style={style === "1" ? { transform: `translateX(-${curr * (100 / slidesToShow)}%)` } : style === "2" ? { transform: `translateX(-${curr * (70)}%)` } : style === "3" ? { transform: `translateX(-${curr * (100)}%)` } : style === "4" ? { transform: `translateX(-${curr * (100 / slidesToShow)}%)` } : {}}
             >
                 {style === "1" && Children.map(children, (child, index) => (
                     <div 
@@ -103,18 +105,29 @@ export default function Carousel({
                         {child}
                     </div>
                 ))}
+                {style === "4" && Children.map(children, (child, index) => (
+                    <div 
+                        key={index}
+                        className={`shrink-0 px-2`} 
+                        style={{ 
+                            width: `${100 / slidesToShow}%`,
+                        }}
+                    >
+                        {child}
+                    </div>
+                ))}
             </div>
             
-            <div className="absolute inset-0 flex items-center justify-between p-4">
+            <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none">
                 <button 
                     onClick={prev}
-                    className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+                    className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white pointer-events-auto"
                 >
                     <ChevronLeft className="h-6 w-6" />
                 </button>
                 <button
                     onClick={next}
-                    className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+                    className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white pointer-events-auto"
                 >
                     <ChevronRight className="h-6 w-6" />
                 </button>
@@ -130,7 +143,7 @@ export default function Carousel({
                                     resetAutoSlideTimer();
                                 }}
                                 className={`
-                                    transition-all w-2 h-2 bg-white rounded-full
+                                    transition-all w-2 h-2 bg-${dot === "black" ? "black" : "white"} rounded-full
                                     ${curr === i ? "p-1.5" : "bg-opacity-50"}
                                 `}>
                             </button>

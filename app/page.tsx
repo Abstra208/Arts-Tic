@@ -15,15 +15,17 @@ export default function Page() {
                 </div>
                 <div className='w-full py-12'>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full'>
-                        <div className='flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md'>
-                            <Image src="/images/explo-art/DSC00976.jpg" width={300} height={150} alt="Parcours Explo Arts" className="rounded-lg w-full h-45 md:h-80 object-cover" />
-                            <h3 className='mt-6 text-2xl font-bold text-gray-800'>Parcours Explo Arts</h3>
-                            <SlideButton link='/explo-arts' />
-                        </div>
-                        <div className='flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md'>
-                            <Image src="/images/tic/DSC00978.jpg" width={300} height={150} alt="Parcours TIC et Créativité" className="rounded-lg w-full h-45 md:h-80 object-cover" />
-                            <h3 className='mt-6 text-2xl font-bold text-gray-800'>Parcours TIC et Créativité</h3>
-                            <SlideButton link='/tic-creativite' />
+                        <div className='flex flex-col md:flex-row gap-8 w-full col-span-1 md:col-span-2 group'>
+                            <section className='flex-1 flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md hover:rotate-y-45 group-has-[section:nth-child(2):hover]:scale-95 transition-transform duration-300 hover:z-10'>
+                                <Image src="/images/explo-art/DSC00976.jpg" width={300} height={150} alt="Parcours Explo Arts" className="rounded-lg w-full h-45 md:h-80 object-cover" />
+                                <h3 className='mt-6 text-2xl font-bold text-gray-800'>Parcours Explo Arts</h3>
+                                <SlideButton link='/explo-arts' />
+                            </section>
+                            <section className='flex-1 flex flex-col items-center p-6 bg-gray-100 rounded-lg hover:rotate-y-45 hover:shadow-[-8px_0_24px_rgba(0,0,0,0.15)] group-has-[section:nth-child(1):hover]:scale-95 transition-all duration-300 hover:z-10'>
+                                <Image src="/images/tic/DSC00978.jpg" width={300} height={150} alt="Parcours TIC et Créativité" className="rounded-lg w-full h-45 md:h-80 object-cover" />
+                                <h3 className='mt-6 text-2xl font-bold text-gray-800'>Parcours TIC et Créativité</h3>
+                                <SlideButton link='/tic-creativite' />
+                            </section>
                         </div>
                     </div>
                 </div>

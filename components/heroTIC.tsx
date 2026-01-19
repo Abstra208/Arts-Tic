@@ -11,7 +11,7 @@ export default function HeroTIC() {
                 <Image src="/images/tic/DSC01608.png" width={1920} height={1080} className="absolute top-15 right-0 h-20 md:h-40 w-auto" alt="" />
             </div>
             <div className="h-[40svh] md:h-[70vh]">
-                <video controls muted loop playsInline preload="none" controlsList="nodownload nofullscreen noremoteplayback" className="w-full h-full object-cover">
+                <video muted loop playsInline preload="none" controlsList="nodownload nofullscreen noremoteplayback" className="w-full h-full object-cover">
                     <source src="/videos/arts-broll.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
