@@ -7,11 +7,11 @@ export default function HeroArts() {
     useGSAP(() => {
         const tl = gsap.timeline();
         
-        const title = tl.fromTo(".hero-arts-title",
+        tl.fromTo(".hero-arts-title",
             { x: -500 },
             { x: 0, duration: 1, ease: "expo.inOut" }
         );
-        const logo = tl.fromTo(".hero-arts-logo",
+        tl.fromTo(".hero-arts-logo",
             { x: 150 },
             { x: 0, duration: 1, ease: "expo.inOut" },
             "<"

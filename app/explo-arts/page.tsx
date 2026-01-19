@@ -64,7 +64,7 @@ export default function ArtsPage() {
             <section>
                 <div>
                     <h1 className='text-4xl md:text-5xl font-bold text-center relative after:content-[""] after:block after:w-24 after:h-1 after:bg-blue-600 after:mx-auto after:mt-4'>Article promotionnel</h1>
-                    <p className='text-xl text-center mt-4'>Nous offrons une sélection d'articles promotionnels uniques pour.</p>
+                    <p className='text-xl text-center mt-4'>Nous offrons une sélection d&apos;articles promotionnels uniques pour.</p>
                 </div>
                 <Carousel style="4" slidesToShow={4} className="py-12" dot="black">
                     <ProductImageGallery
