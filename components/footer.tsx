@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="w-full h-0.5 bg-black" />
             <div className="flex flex-col md:flex-row justify-between pt-4 text-md text-gray-600 text-md md:text-lg">
                 <p>© 2025 <a className="text-blue-600" target="_blank" href="https://crealab.ca">CréaLab</a>. Tous droits réservés.</p>
-                <p>Une réalisation étudiante par <a className="text-blue-600" target="_blank" href="https://abstra208.com">Ludovic</a></p>
+                <p>Une réalisation étudiante par <a className="text-blue-600" target="_blank" href="https://morin.moi">Ludovic</a></p>
             </div>
         </footer>
     );
