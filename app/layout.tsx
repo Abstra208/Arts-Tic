@@ -5,26 +5,51 @@ import Render from "@/components/render";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  applicationName: 'Arts & TIC',
+  creator: 'Ludovic Morin',
+  publisher: 'CréaLab',
   title: {
-    default: 'Arts & TIC',
-    template: '%s - Arts & TIC',
+    default: 'Arts & TIC concentration de La Camaradière',
+    template: '%s - Arts & TIC concentration de La Camaradière',
   },
-  description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CreaLab.',
-  keywords: ['Arts', 'TIC', 'Arts et TIC', 'Arts & TIC', 'La Camaradière', 'école secondaire', 'concentration', 'Concentration Arts et TIC', 'éducation', 'créativité', 'technologie'],
-  authors: [{ name: 'Ludovic' }],
-  creator: 'Ludovic',
-  publisher: 'CreaLab',
+  description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CréaLab.',
+  keywords: [
+    'Arts',
+    'TIC',
+    'Arts et TIC',
+    'Arts & TIC',
+    'La Camaradière',
+    'école secondaire',
+    'concentration',
+    'Concentration Arts et TIC',
+    'éducation',
+    'créativité',
+    'technologie',
+    'Québec',
+  ],
+  authors: [{ name: 'Ludovic Morin', url: 'https://morin.moi' }],
   metadataBase: new URL('https://arts-tic.crealab.ca'),
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      new URL('/favicon.ico', 'https://arts-tic.crealab.ca'),
+      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
+    ],
+    shortcut: ['/favicon.png'],
+    apple: [
+      { url: '/favicon.ico' },
+    ]
+  },
   openGraph: {
     type: 'website',
     locale: 'fr_CA',
-    title: 'Arts & TIC',
-    description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CreaLab.',
-    siteName: 'Arts & TIC',
+    title: 'Arts & TIC - Concentration de La Camaradière',
+    description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CréaLab.',
     url: 'https://arts-tic.crealab.ca',
+    siteName: 'Arts & TIC',
     images: [
       {
         url: '/images/hero.jpg',
@@ -43,15 +68,8 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+  }
+}
 
 const FunnelDisplay = localFont({
   src: [
