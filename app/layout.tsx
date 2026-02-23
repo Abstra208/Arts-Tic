@@ -36,7 +36,8 @@ export const metadata: Metadata = {
     icon: [
       { url: '/favicon.ico' },
       new URL('/favicon.ico', 'https://arts-tic.crealab.ca'),
-      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
+      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: light)' },
+      { url: '/favicon.ico', media: '(prefers-color-scheme: dark)' },
     ],
     shortcut: ['/favicon.png'],
     apple: [
