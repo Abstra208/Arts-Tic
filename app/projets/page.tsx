@@ -32,14 +32,14 @@ const featuredGallery = [
 const pathwayCards = [
     {
         href: "/explo-arts",
-        image: "/images/explo-art/DSC00976.jpg",
+        image: "/images/explo-art/hero.jpg",
         eyebrow: "Explo Arts",
         title: "Des projets où la matière, le volume et la présentation occupent une place centrale.",
         text: "On y retrouve des objets, des recherches plastiques, des compositions et des réalisations pensées pour être vues dans un espace réel.",
     },
     {
         href: "/tic-creativite",
-        image: "/images/tic/DSC00978.jpg",
+        image: "/images/tic/hero.jpg",
         eyebrow: "TIC et créativité",
         title: "Des productions visuelles qui mobilisent image, montage, design et culture numérique.",
         text: "Affiches, médias visuels, prototypes et projets numériques montrent une autre façon de concevoir et de communiquer.",
@@ -50,11 +50,11 @@ const repeatedStrip = [
     "/images/projets/mode.jpg",
     "/images/projets/montage_affiche.png",
     "/images/projets/maquette.jpg",
-    "/images/projets/aquaurabaine.jpg",
+    "/images/projets/hero.jpg",
     "/images/projets/soulier.jpg",
     "/images/projets/mode.jpg",
     "/images/projets/maquette.jpg",
-    "/images/projets/aquaurabaine.jpg",
+    "/images/projets/hero.jpg",
 ];
 
 function ProjectsGridFallback() {
@@ -193,7 +193,7 @@ export default function Projets() {
                 href="https://inscris-toi.cssc.gouv.qc.ca/Login"
                 outside={true}
                 linkLabel="Inscrire votre enfant"
-                image="/images/tic/DSC00978.jpg"
+                image="/images/tic/hero.jpg"
                 imageAlt="inscription aux parcours Arts et TIC"
             />
         </div>

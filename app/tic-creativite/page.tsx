@@ -28,7 +28,7 @@ const productionSteps = [
     {
         title: "Produire avec les outils numériques",
         text: "Les élèves passent ensuite à la composition, au montage, à la modélisation ou à la mise en forme selon le projet choisi.",
-        image: "/images/tic/DSC00978.jpg",
+        image: "/images/tic/hero.jpg",
     },
     {
         title: "Présenter, tester, ajuster",
@@ -69,7 +69,7 @@ const pathwayMarkers = [
 
 const galleryImages = [
     { src: "/images/projets/montage_affiche.png", alt: "Montage d'affiche réalisé dans le parcours TIC et créativité" },
-    { src: "/images/projets/aquaurabaine.jpg", alt: "Projet visuel du parcours TIC et créativité" },
+    { src: "/images/projets/hero.jpg", alt: "Projet visuel du parcours TIC et créativité" },
     { src: "/images/tic/DSC01615.jpg", alt: "Élèves en activité dans le parcours TIC et créativité" },
 ];
 
@@ -344,7 +344,7 @@ export async function generateMetadata(): Promise<Metadata> {
         title: "TIC et Créativité - Arts & TIC",
         openGraph: {
             title: "TIC et Créativité - Arts & TIC",
-            images: ["/images/tic/DSC00978.jpg"],
+            images: ["/images/tic/hero.jpg"],
         },
     };
 }

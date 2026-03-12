@@ -25,7 +25,7 @@ export default function HeroTIC() {
                         <div className="overflow-hidden rounded-[1.6rem] border border-black/10 bg-white shadow-[0_32px_80px_-48px_rgba(15,23,42,0.28)] md:rounded-4xl">
                             <div className="relative aspect-16/10 xl:aspect-5/3">
                                 <Image
-                                    src="/images/tic/DSC00978.jpg"
+                                    src="/images/tic/hero.jpg"
                                     width={1920}
                                     height={1280}
                                     alt="Élèves du parcours TIC et créativité"

@@ -28,7 +28,7 @@ const productionSteps = [
     {
         title: "Créer et expérimenter",
         text: "Les élèves passent ensuite à la production et explorent les matériaux, les compositions et les idées propres à leur projet.",
-        image: "/images/explo-art/DSC00976.jpg",
+        image: "/images/explo-art/hero.jpg",
     },
     {
         title: "Présenter le résultat",
@@ -351,7 +351,7 @@ export default function ArtsPage() {
                 text="Après Explo Arts, la page TIC et créativité permet de voir l&apos;autre versant du programme, davantage tourné vers l&apos;image, les médias et la production numérique."
                 href="/tic-creativite"
                 linkLabel="Découvrir TIC et créativité"
-                image="/images/tic/DSC00978.jpg"
+                image="/images/tic/hero.jpg"
                 imageAlt="Parcours TIC et créativité"
             />
         </div>
@@ -363,7 +363,7 @@ export async function generateMetadata(): Promise<Metadata> {
         title: "Explo Arts - Arts & TIC",
         openGraph: {
             title: "Explo Arts - Arts & TIC",
-            images: ["/images/explo-art/DSC00976.jpg"],
+            images: ["/images/explo-art/hero.jpg"],
         },
     };
 }

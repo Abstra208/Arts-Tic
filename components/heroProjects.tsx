@@ -20,7 +20,7 @@ const heroImages = [
         className: "",
     },
     {
-        src: "/images/projets/aquaurabaine.jpg",
+        src: "/images/projets/hero.jpg",
         alt: "Projet visuel présenté dans la galerie",
         className: "md:col-span-2",
     },

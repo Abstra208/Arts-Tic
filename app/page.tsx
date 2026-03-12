@@ -98,7 +98,7 @@ export default function Page() {
                 <div className='w-full py-12'>
                     <div className='grid grid-cols-1 gap-8 w-full lg:grid-cols-2'>
                         <section className='group flex flex-col overflow-hidden rounded-4xl border border-black/10 bg-white p-5 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] md:p-6'>
-                            <Image src="/images/explo-art/DSC00976.jpg" width={900} height={600} alt="Parcours Explo Arts" className="h-56 w-full rounded-[1.35rem] object-cover transition-transform duration-500 group-hover:scale-[1.02] md:h-80 md:rounded-3xl" />
+                            <Image src="/images/explo-art/hero.jpg" width={900} height={600} alt="Parcours Explo Arts" className="h-56 w-full rounded-[1.35rem] object-cover transition-transform duration-500 group-hover:scale-[1.02] md:h-80 md:rounded-3xl" />
                             <h3 className='mt-5 text-2xl font-bold text-gray-900 md:mt-6 md:text-3xl'>Parcours Explo Arts</h3>
                             <p className='mt-3 text-base leading-7 text-slate-600 md:text-lg'>
                                 Pour les élèves attirés par la matière, la composition, le dessin, le volume et l&apos;expérimentation artistique.
@@ -106,7 +106,7 @@ export default function Page() {
                             <SlideButton link='/explo-arts' text='Découvrir Explo Arts' className='text-slate-900' openedDefault />
                         </section>
                         <section className='group flex flex-col overflow-hidden rounded-4xl border border-black/10 bg-[#f4f3ef] p-5 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] md:p-6'>
-                            <Image src="/images/tic/DSC00978.jpg" width={900} height={600} alt="Parcours TIC et Créativité" className="h-56 w-full rounded-[1.35rem] object-cover transition-transform duration-500 group-hover:scale-[1.02] md:h-80 md:rounded-3xl" />
+                            <Image src="/images/tic/hero.jpg" width={900} height={600} alt="Parcours TIC et Créativité" className="h-56 w-full rounded-[1.35rem] object-cover transition-transform duration-500 group-hover:scale-[1.02] md:h-80 md:rounded-3xl" />
                             <h3 className='mt-5 text-2xl font-bold text-gray-900 md:mt-6 md:text-3xl'>Parcours TIC et créativité</h3>
                             <p className='mt-3 text-base leading-7 text-slate-600 md:text-lg'>
                                 Pour les élèves qui veulent créer avec les outils numériques, les médias, l&apos;image et les technologies de production.
@@ -118,7 +118,7 @@ export default function Page() {
             </section>
             <Showcase moreButtonText="Voir tous les projets">
                 <Image src="/images/projets/maquette2.jpg" width={500} height={500} alt="Maquette réalisée dans le programme Arts et TIC" />
-                <Image src="/images/projets/aquaurabaine.jpg" width={500} height={500} alt="Projet d’aquaurabaine réalisé par des élèves" />
+                <Image src="/images/projets/hero.jpg" width={500} height={500} alt="Projet d’hero réalisé par des élèves" />
                 <Image src="/images/projets/soulier2.jpg" width={500} height={500} alt="Projet de soulier conçu par des élèves" />
             </Showcase>
             <section className="mt-16 px-4 md:px-10">
@@ -142,7 +142,7 @@ export default function Page() {
                     className="mt-8 w-full h-auto object-cover rounded-2xl border border-black/10 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)]"
                     autoPlay controls muted loop playsInline preload="none"
                     controlsList="nodownload nofullscreen noremoteplayback"
-                    poster='/images/arts.png'
+                    poster='/intro-thumbnail.png'
                 >
                     <source src="/intro.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -154,7 +154,7 @@ export default function Page() {
                 text="Si tu veux voir une première facette du programme de plus près, le parcours Explo Arts est la meilleure suite logique depuis l&apos;accueil."
                 href="/explo-arts"
                 linkLabel="Découvrir Explo Arts"
-                image="/images/explo-art/DSC00976.jpg"
+                image="/images/explo-art/hero.jpg"
                 imageAlt="Parcours Explo Arts"
             />
         </div>
