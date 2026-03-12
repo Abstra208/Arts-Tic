@@ -41,7 +41,7 @@ export default function Page() {
     ];
 
     return (
-        <div className='max-w-6xl pb-4'>
+        <div className='max-w-6xl'>
             <Hero />
             <section className='w-full px-4 pt-16 md:px-10'>
                 <div className='grid gap-4 rounded-4xl border border-black/10 bg-white px-4 py-5 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] sm:px-5 sm:py-6 md:px-8 md:py-8 lg:grid-cols-[0.82fr_1.18fr]'>
