@@ -63,8 +63,8 @@ export default function Header() {
     return (
         <header className="fixed inset-x-0 top-4 z-1000">
             <div className="mx-auto w-full max-w-6xl px-4 md:px-10">
-                <div className="relative flex items-center justify-between rounded-[1.65rem] border border-black/12 bg-[#fbfaf7]/98 px-4 py-3 shadow-[0_24px_80px_-34px_rgba(15,23,42,0.32)] backdrop-blur-lg md:rounded-[1.9rem] md:px-6">
-                    <div className="pointer-events-none absolute inset-0 rounded-[1.65rem] ring-1 ring-black/5 md:rounded-[1.9rem]" />
+                <div className="relative flex items-center justify-between rounded-full border border-black/12 bg-[#fbfaf7]/98 px-4 py-3 shadow-[0_24px_80px_-34px_rgba(15,23,42,0.32)] backdrop-blur-lg md:rounded-[1.9rem] md:px-6">
+                    <div className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-black/5" />
                     <div className="flex items-center gap-3">
                         <Link
                             href="/"
@@ -72,7 +72,7 @@ export default function Header() {
                             onClick={() => setIsMobileOpen(false)}
                             aria-current={isHomePage ? 'page' : undefined}
                         >
-                            <Image className="h-8 w-auto" height={500} width={500} src="/logo.svg" alt="Logo Arts et TIC" />
+                            <Image className="h-8 w-auto" height={500} width={500} src="/logo.webp" alt="Logo Arts et TIC" />
                             <div className="flex items-center gap-2">
                                 <span className="text-2xl font-semibold text-black transition-transform duration-500 ease-in-out sm:text-3xl">
                                     Arts & TIC
