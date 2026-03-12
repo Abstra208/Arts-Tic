@@ -72,7 +72,7 @@ export default function Header() {
                             onClick={() => setIsMobileOpen(false)}
                             aria-current={isHomePage ? 'page' : undefined}
                         >
-                            <Image className="h-8 w-auto" height={500} width={500} src="/logo.webp" alt="Logo Arts et TIC" />
+                            <Image className="h-8 w-auto" height={500} width={500} src="/logo.svg" alt="Logo Arts et TIC" />
                             <div className="flex items-center gap-2">
                                 <span className="text-2xl font-semibold text-black transition-transform duration-500 ease-in-out sm:text-3xl">
                                     Arts & TIC
