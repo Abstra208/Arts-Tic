@@ -8,6 +8,7 @@ type PageEndCtaProps = {
     title: string;
     text: string;
     href: string;
+    outside?: boolean;
     linkLabel: string;
     image: string;
     imageAlt: string;
@@ -18,6 +19,7 @@ export default function PageEndCta({
     title,
     text,
     href,
+    outside,
     linkLabel,
     image,
     imageAlt,
@@ -32,6 +34,8 @@ export default function PageEndCta({
                         <p className="mt-4 max-w-xl text-base leading-7 text-slate-700 md:text-lg md:leading-8">{text}</p>
                         <Link
                             href={href}
+                            target={outside ? "_blank" : undefined}
+                            rel={outside ? "noopener noreferrer" : undefined}
                             className="group mt-6 inline-flex items-center gap-3 rounded-full bg-black px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 md:px-6 md:py-4 md:text-base"
                         >
                             {linkLabel}

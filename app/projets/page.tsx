@@ -191,6 +191,7 @@ export default function Projets() {
                 title="Intéressé par les parcours ?"
                 text="Le processus d'inscription est simple et rapide. N'hésitez pas à nous contacter pour toute question ou pour obtenir plus d'informations sur les parcours."
                 href="https://inscris-toi.cssc.gouv.qc.ca/Login"
+                outside={true}
                 linkLabel="Inscrire votre enfant"
                 image="/images/tic/DSC00978.jpg"
                 imageAlt="inscription aux parcours Arts et TIC"
