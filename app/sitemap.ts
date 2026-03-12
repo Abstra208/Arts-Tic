@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://arts-tic.crealab.ca'
+
     return [
         {
             url: baseUrl,
@@ -26,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/intro.mp4`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.4,
         },
     ]
 }

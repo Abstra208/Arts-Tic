@@ -144,7 +144,7 @@ export default function Page() {
                     controlsList="nodownload nofullscreen noremoteplayback"
                     poster='/images/arts.png'
                 >
-                    <source src="/video_arts_tic.mp4" type="video/mp4" />
+                    <source src="/intro.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </section>
