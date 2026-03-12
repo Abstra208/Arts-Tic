@@ -83,6 +83,17 @@ const FunnelDisplay = localFont({
   variable: "--font-funnel-display",
 });
 
+export const Newsreader = localFont({
+  src: [
+    {
+      path: "../public/fonts/Newsreader-VariableFont.ttf",
+      weight: "600",
+      style: "semi-bold",
+    },
+  ],
+  variable: "--font-newsreader",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -92,7 +103,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`body text-black ${FunnelDisplay.className}`}>
         <Header />
-        <Render>
+        <Render className='w-screen flex flex-col items-center'>
           {children}
         </Render>
       </body>
