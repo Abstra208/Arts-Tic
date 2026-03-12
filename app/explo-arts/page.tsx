@@ -271,7 +271,7 @@ export default function ArtsPage() {
                 <div className="rounded-4xl border border-black/10 bg-white px-5 py-6 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] md:px-8 md:py-8">
                     <div className="mb-6 flex gap-4 flex-col md:mb-8">
                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Repères du parcours</p>
-                        <h2 className={`mt-4 text-3xl md:text-5xl max-w-[50%] ${Newsreader.className}`}>Une pratique artistique qui s&apos;ancre dans le faire.</h2>
+                        <h2 className={`mt-4 text-3xl md:text-5xl md:max-w-[50%] ${Newsreader.className}`}>Une pratique artistique qui s&apos;ancre dans le faire.</h2>
                         <p className="max-w-2xl text-base leading-7 text-slate-700 md:text-lg md:leading-8 lg:justify-self-end">
                             Explo Arts relie recherche, fabrication et présentation dans un rythme d&apos;atelier qui donne aux idées une forme plus concrète.
                         </p>
