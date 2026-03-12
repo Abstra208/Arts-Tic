@@ -62,7 +62,7 @@ export default function Header() {
 
     return (
         <header className="fixed inset-x-0 top-4 z-1000">
-            <div className="w-full mx-auto max-w-6xl px-4 md:px-0">
+            <div className="w-full mx-auto max-w-6xl px-4 md:px-3">
                 <div className="relative flex items-center justify-between rounded-full border border-black/12 bg-[#fbfaf7]/98 px-4 py-3 shadow-[0_24px_80px_-34px_rgba(15,23,42,0.32)] backdrop-blur-lg md:rounded-[1.9rem] md:px-6">
                     <div className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-black/5" />
                     <div className="flex items-center gap-3">
