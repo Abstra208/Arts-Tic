@@ -341,9 +341,9 @@ export default function TicPage() {
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "TIC et Créativité - Arts & TIC",
+        title: "TIC et Créativité",
         openGraph: {
-            title: "TIC et Créativité - Arts & TIC",
+            title: "TIC et Créativité",
             images: ["/images/tic/hero.jpg"],
         },
     };

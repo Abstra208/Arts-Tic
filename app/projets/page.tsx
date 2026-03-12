@@ -211,9 +211,9 @@ function ArrowRightIcon() {
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Projets - Arts & TIC",
+        title: "Projets",
         openGraph: {
-            title: "Projets - Arts & TIC",
+            title: "Projets",
             images: ["/images/projets/mode.jpg"],
         },
     };

@@ -360,9 +360,9 @@ export default function ArtsPage() {
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: "Explo Arts - Arts & TIC",
+        title: "Explo Arts",
         openGraph: {
-            title: "Explo Arts - Arts & TIC",
+            title: "Explo Arts",
             images: ["/images/explo-art/hero.jpg"],
         },
     };
