@@ -25,7 +25,7 @@ export default function PageEndCta({
     imageAlt,
 }: PageEndCtaProps) {
     return (
-        <section className="mt-16 w-full px-4 md:px-10">
+        <section className="mt-16 w-full">
             <div className="overflow-hidden rounded-4xl border border-black/10 bg-white shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)]">
                 <div className="grid gap-6 p-5 md:p-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-center">
                     <div>

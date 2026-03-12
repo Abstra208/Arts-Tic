@@ -5,7 +5,7 @@ import { Newsreader } from "@/app/layout";
 
 export default function HeroTIC() {
     return (
-       <section className="w-full px-4 pt-25 md:px-10">
+       <section className="w-full pt-25">
             <div className="overflow-hidden rounded-4xl border border-black/10 bg-white px-5 py-6 shadow-[0_28px_80px_-52px_rgba(15,23,42,0.28)] md:rounded-[2.25rem] md:px-10 md:py-10">
                 <div>
                     <p className="inline-flex max-w-full rounded-full border border-black/10 bg-[#f5f4f0] px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-600 sm:px-4 sm:text-xs sm:tracking-[0.24em]">

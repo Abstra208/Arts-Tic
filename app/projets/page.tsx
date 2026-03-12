@@ -75,10 +75,10 @@ function ProjectsGridFallback() {
 
 export default function Projets() {
     return (
-        <div className="max-w-6xl pb-6">
+        <div className="max-w-6xl px-4 md:px-10">
             <HeroProjects />
 
-            <section className="mt-16 w-full px-4 md:px-10">
+            <section className="mt-16 w-full">
                 <div className="grid gap-4 rounded-4xl border border-black/10 bg-white px-4 py-5 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] sm:px-5 sm:py-6 md:px-8 md:py-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)]">
                     <div className="rounded-3xl border border-black/8 bg-[#f7f6f2] px-5 py-6 md:px-8 md:py-8">
                         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">La galerie en bref</p>
@@ -99,7 +99,7 @@ export default function Projets() {
                 </div>
             </section>
 
-            <section className="mt-16 w-full px-4 md:px-10">
+            <section className="mt-16 w-full">
                 <div className="rounded-4xl border border-black/10 bg-white px-5 py-6 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] md:px-8 md:py-8">
                     <div className="mb-6 md:mb-8">
                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Sélection visuelle</p>
@@ -123,7 +123,7 @@ export default function Projets() {
                 </div>
             </section>
 
-            <section className="mt-16 w-full px-4 md:px-10">
+            <section className="mt-16 w-full">
                 <div className="grid gap-6 lg:grid-cols-2">
                     {pathwayCards.map((card) => (
                         <article key={card.href} className="overflow-hidden rounded-4xl border border-black/10 bg-white shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)]">
@@ -147,7 +147,7 @@ export default function Projets() {
                 </div>
             </section>
 
-            <section className="mt-16 w-full px-4 md:px-10">
+            <section className="mt-16 w-full">
                 <div className="overflow-hidden rounded-4xl border border-black/10 bg-[#111111] px-5 py-8 text-white shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] md:px-8 md:py-8">
                     <div className="mb-6 md:mb-8">
                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/55">Rythme visuel</p>
@@ -171,7 +171,7 @@ export default function Projets() {
                 </div>
             </section>
 
-            <section id="galerie" className="mt-16 w-full px-4 md:px-10">
+            <section id="galerie" className="mt-16 w-full">
                 <div className="rounded-4xl border border-black/10 bg-white px-5 py-6 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] md:px-8 md:py-8">
                     <div className="mb-6 md:mb-8">
                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Tous les projets</p>

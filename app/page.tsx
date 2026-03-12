@@ -41,9 +41,9 @@ export default function Page() {
     ];
 
     return (
-        <div className='max-w-6xl'>
+        <div className='max-w-6xl px-4 md:px-10'>
             <Hero />
-            <section className='w-full px-4 pt-16 md:px-10'>
+            <section className='w-full pt-16'>
                 <div className='grid gap-4 rounded-4xl border border-black/10 bg-white px-4 py-5 shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)] sm:px-5 sm:py-6 md:px-8 md:py-8 lg:grid-cols-[0.82fr_1.18fr]'>
                     <div className='rounded-3xl border border-black/8 bg-[#f7f6f2] px-5 py-6 md:px-8 md:py-8'>
                         <p className='text-sm font-semibold uppercase tracking-[0.24em] text-slate-500'>Arts et TIC en bref</p>
@@ -70,7 +70,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <section className='mt-16 px-4 md:px-10'>
+            <section className='mt-16'>
                 <div className='grid gap-8 rounded-4xl border border-black/10 bg-[#111111] px-5 py-8 text-white md:px-10 md:py-10 lg:grid-cols-[0.9fr_1.1fr]'>
                     <div>
                         <p className='text-sm font-semibold uppercase tracking-[0.22em] text-white/55'>Ce que le programme rend possible</p>
@@ -89,7 +89,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <section id='parcours' className='mt-16 px-4 md:px-10 w-full'>
+            <section id='parcours' className='mt-16 w-full'>
                 <div className='flex items-center flex-col'>
                     <p className='text-sm font-semibold uppercase tracking-[0.24em] text-slate-500'>Les parcours</p>
                     <h3 className={`mt-4 text-center text-3xl md:text-5xl ${Newsreader.className}`}>Deux façons d&apos;habiter la création.</h3>
@@ -121,7 +121,7 @@ export default function Page() {
                 <Image src="/images/projets/hero.jpg" width={500} height={500} alt="Projet d’hero réalisé par des élèves" />
                 <Image src="/images/projets/soulier2.jpg" width={500} height={500} alt="Projet de soulier conçu par des élèves" />
             </Showcase>
-            <section className="mt-16 px-4 md:px-10">
+            <section className="mt-16">
                 <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
                     <div className="h-[42svh] min-h-72 overflow-hidden rounded-4xl md:h-[68svh] md:min-h-96">
                         <Image src="/images/arts.png" width={1920} height={1080} alt="Réalisations du programme Arts et TIC" className="w-full h-full object-cover" />
@@ -135,7 +135,7 @@ export default function Page() {
                     </aside>
                 </div>
             </section>
-            <section className="mt-16 h-auto px-4 md:px-10">
+            <section className="mt-16 h-auto">
                 <h3 className={`text-center text-3xl md:text-5xl ${Newsreader.className}`}>Un aperçu en mouvement</h3>
                 <p className='mx-auto mt-4 max-w-2xl text-center text-base md:text-xl text-slate-600'>Cette vidéo a été réalisée par d&apos;anciens élèves de la concentration. Elle complète bien ce que les images laissent entrevoir.</p>
                 <video

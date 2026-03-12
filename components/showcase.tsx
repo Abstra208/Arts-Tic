@@ -47,7 +47,7 @@ export default function Showcase({ children, moreButtonText }: ShowcaseProps) {
     };
 
     return (
-        <section className="pt-16 px-4 md:px-10">
+        <section className="pt-16">
             <div className="overflow-hidden rounded-4xl border border-black/10 bg-white shadow-[0_28px_80px_-52px_rgba(15,23,42,0.28)]">
                 <div className="grid gap-8 px-5 py-6 md:px-10 md:py-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
                     <div className="flex flex-col justify-between">
