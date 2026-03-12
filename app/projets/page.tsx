@@ -214,7 +214,7 @@ export async function generateMetadata(): Promise<Metadata> {
         title: "Projets",
         openGraph: {
             title: "Projets",
-            images: ["/images/projets/mode.jpg"],
+            images: ["/images/projets/hero.jpg"],
         },
     };
 }

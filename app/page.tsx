@@ -163,10 +163,10 @@ export default function Page() {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Arts & TIC",
+    title: 'Arts & TIC concentration de La Camaradière',
     openGraph: {
-      title: "Arts & TIC",
-      images: ["/images/hero.jpg"],
+        title: 'Arts & TIC concentration de La Camaradière',
+        images: ["/images/hero.jpg"],
     },
   };
 }
