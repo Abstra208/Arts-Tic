@@ -13,7 +13,7 @@ export default function Hero() {
                     </p>
                     <h1 className={`mt-5 text-[2.65rem] leading-none sm:text-5xl md:mt-6 md:text-7xl ${Newsreader.className}`}>
                         Créer avec les arts, les outils et les idées.
-                    </h1> 
+                    </h1>
                 </div>
                 <div className="grid gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,0.72fr)] lg:items-center xl:grid-cols-[minmax(0,0.68fr)_minmax(0,1.32fr)]">
                     <div className="min-w-0 max-w-2xl">
@@ -31,6 +31,24 @@ export default function Hero() {
                                     className="h-full w-full object-cover"
                                 />
                             </div>
+                        </div>
+                        <div className="flex">
+                            <a
+                                href="https://inscris-toi.cssc.gouv.qc.ca/Login"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-black px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 sm:w-auto sm:flex-nowrap sm:px-6 sm:py-4 sm:text-base sm:whitespace-nowrap"
+                            >
+                                S&apos;inscrire au programme
+                                <ExternalLink size={18} />
+                            </a>
+                            <Link
+                                href="#parcours"
+                                className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-black/10 bg-[#f8f7f3] px-5 py-3.5 text-sm font-semibold text-slate-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-black sm:w-auto sm:flex-nowrap sm:px-6 sm:py-4 sm:text-base sm:whitespace-nowrap"
+                            >
+                                Découvrir les parcours
+                                <ArrowRight size={18} />
+                            </Link>                            
                         </div>
                     </div>
                     <div className="min-w-0 lg:-mr-2 xl:-mr-4">
