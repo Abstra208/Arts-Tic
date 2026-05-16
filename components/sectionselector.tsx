@@ -18,7 +18,6 @@ export default function SectionSelector({
             let current = "";
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (window.scrollY >= sectionTop - 100) {
                     current = section.id;
                 }

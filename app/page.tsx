@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PageEndCta from '@/components/pageendcta';
 import { SlidingCarousel } from '@/components/slidingcarousel';
-import { ArrowRight, Plus, Icon } from 'lucide-react';
+import { ArrowRight, Plus } from 'lucide-react';
 import Button from '@/components/button';
 
 export default function Page() {
