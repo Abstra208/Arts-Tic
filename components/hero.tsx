@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section className="md:h-screen w-full pl-mobile md:pl-desktop text-secondary-text bg-secondary flex flex-col my-15 md:mt-0 gap-8 md:gap-0 md:grid md:grid-cols-[auto_1fr] overflow-hidden">
-            <div className="flex flex-col justify-center items-start z-20">
+            <div className="flex flex-col justify-center items-start z-20 pr-4">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
                     Un cerveau qui pense.
                 </h1>
