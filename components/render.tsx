@@ -6,9 +6,11 @@ import Footer from "@/components/footer";
 export default function Render({
     className,
     children,
+    disabled = false,
 }: Readonly<{
     className?: string;
     children: React.ReactNode;
+    disabled?: boolean;
 }>) {
     const [isMobile, setIsMobile] = useState(true);
     
@@ -24,14 +26,13 @@ export default function Render({
 
     return (
         <>
-            {isMobile == true ? (
+            {isMobile || disabled ? (
                 <div className={`${className}`}>
                     {children}
                     <Footer />
                 </div>
-                
             ) : (
-                <GSAPSmootherProvider className={`${className}`} >
+                <GSAPSmootherProvider className={`${className}`}>
                     {children}
                     <Footer />
                 </GSAPSmootherProvider>

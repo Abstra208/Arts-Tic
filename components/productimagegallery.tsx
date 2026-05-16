@@ -82,19 +82,19 @@ export default function ProductImageGallery({
                 <div className={featured ? (inverted ? "order-2" : "order-1") : ""}>
                     <div className="flex flex-wrap items-center gap-2">
                         {badge ? (
-                            <span className="rounded-full border border-black/10 bg-white px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-slate-600">
+                            <span className="rounded-full border border-black/10 bg-white px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] -600">
                                 {badge}
                             </span>
                         ) : null}
-                        <span className="rounded-full border border-black/10 bg-white px-3 py-1 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-slate-500">
+                        <span className="rounded-full border border-black/10 bg-white px-3 py-1 text-[0.72rem] font-medium uppercase tracking-[0.18em] -500">
                             {itemEntries.length} variations
                         </span>
                     </div>
 
-                    <h3 className="mt-4 text-2xl font-semibold text-slate-900 md:text-[1.75rem]">{title}</h3>
-                    <p className="mt-3 max-w-xl text-base leading-7 text-slate-700">{description}</p>
+                    <h3 className="mt-4 text-2xl font-semibold  md:text-[1.75rem]">{title}</h3>
+                    <p className="mt-3 max-w-xl text-base leading-7 ">{description}</p>
                     {note ? (
-                        <p className="mt-4 text-sm leading-6 text-slate-500">{note}</p>
+                        <p className="mt-4 text-sm leading-6 -500">{note}</p>
                     ) : null}
 
                     <div className={`mt-5 grid ${colsClass} ${rowsClass} gap-2.5`}>

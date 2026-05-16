@@ -1,12 +1,9 @@
-import { Newsreader } from "@/app/layout";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import Button from "./button";
+import { JSX } from "react";
 
 type PageEndCtaProps = {
-    eyebrow: string;
-    title: string;
-    text: string;
+    title: string | JSX.Element;
     href: string;
     outside?: boolean;
     linkLabel: string;
@@ -15,9 +12,7 @@ type PageEndCtaProps = {
 };
 
 export default function PageEndCta({
-    eyebrow,
     title,
-    text,
     href,
     outside,
     linkLabel,
@@ -25,28 +20,21 @@ export default function PageEndCta({
     imageAlt,
 }: PageEndCtaProps) {
     return (
-        <section className="mt-16 w-full">
-            <div className="overflow-hidden rounded-4xl border border-black/10 bg-white shadow-[0_24px_70px_-54px_rgba(15,23,42,0.2)]">
-                <div className="grid gap-6 p-5 md:p-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-center">
-                    <div>
-                        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">{eyebrow}</p>
-                        <h2 className={`mt-4 text-3xl md:text-5xl ${Newsreader.className}`}>{title}</h2>
-                        <p className="mt-4 max-w-xl text-base leading-7 text-slate-700 md:text-lg md:leading-8">{text}</p>
-                        <Link
-                            href={href}
-                            target={outside ? "_blank" : undefined}
-                            rel={outside ? "noopener noreferrer" : undefined}
-                            className="group mt-6 inline-flex items-center gap-3 rounded-full bg-black px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 md:px-6 md:py-4 md:text-base"
-                        >
-                            {linkLabel}
-                            <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-                        </Link>
-                    </div>
-                    <div className="overflow-hidden rounded-[1.6rem] border border-black/10 bg-[#f7f6f2] p-2">
-                        <div className="relative aspect-16/10 overflow-hidden rounded-[1.2rem]">
-                            <Image src={image} width={1600} height={1000} alt={imageAlt} className="h-full w-full object-cover" />
-                        </div>
-                    </div>
+        <section className="h-[60vh] md:h-[55vh]">
+            <div className="md:gap-6 h-full bg-foreground text-white grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 overflow-hidden">
+                <div className="flex flex-col px-5 justify-center items-start text-start md:items-end md:text-end">
+                    <h2 className="font-bold text-3xl md:text-5xl">{title}</h2>
+                    <Button href={href} outside={outside} inverted>
+                        {linkLabel}
+                    </Button>
+                </div>
+                <div className="relative h-full">
+                    <Image
+                        src={image}
+                        alt={imageAlt}
+                        fill
+                        className="object-cover rounded-b-2xl md:rounded-b-none md:rounded-l-2xl"
+                    />
                 </div>
             </div>
         </section>

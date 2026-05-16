@@ -12,11 +12,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             images: [ `${baseUrl}/images/hero.jpg` ],
         },
         {
-            url: `${baseUrl}/projets`,
+            url: `${baseUrl}/galerie`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
-            images: [ `${baseUrl}/images/projets/hero.jpg` ],
+            images: [ `${baseUrl}/images/galerie/hero.jpg` ],
         },
         {
             url: `${baseUrl}/explo-arts`,

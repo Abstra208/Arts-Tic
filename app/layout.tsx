@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   creator: 'Ludovic Morin',
   publisher: 'CréaLab',
   title: {
-    default: 'Arts & TIC concentration de La Camaradière',
-    template: '%s - Arts & TIC concentration de La Camaradière',
+    default: 'Arts & TIC, Concentration artistique | La Camaradière',
+    template: '%s | La Camaradière',
   },
   description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CréaLab.',
   keywords: [
@@ -83,17 +83,6 @@ const FunnelDisplay = localFont({
   variable: "--font-funnel-display",
 });
 
-export const Newsreader = localFont({
-  src: [
-    {
-      path: "../public/fonts/Newsreader-VariableFont.ttf",
-      weight: "600",
-      style: "semi-bold",
-    },
-  ],
-  variable: "--font-newsreader",
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -103,7 +92,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`body text-black ${FunnelDisplay.className}`}>
         <Header />
-        <Render className='w-screen flex flex-col items-center'>
+        <Render disabled className='max-w-screen flex flex-col items-center'>
           {children}
         </Render>
       </body>
