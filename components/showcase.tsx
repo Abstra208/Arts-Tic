@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { Newsreader } from '@/app/layout';
 
 interface ShowcaseProps {
     children?: React.ReactNode
@@ -52,17 +51,17 @@ export default function Showcase({ children, moreButtonText }: ShowcaseProps) {
                 <div className="grid gap-8 px-5 py-6 md:px-10 md:py-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
                     <div className="flex flex-col justify-between">
                         <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+                            <p className="text-sm font-semibold uppercase tracking-[0.24em] -500">
                                 Projets d&apos;élèves
                             </p>
-                            <h3 className={`mt-4 text-3xl md:text-5xl ${Newsreader.className}`}>
+                            <h3 className="mt-4 text-3xl md:text-5xl">
                                 Voir ce que le programme produit vraiment.
                             </h3>
-                            <p className="mt-4 max-w-lg text-base leading-7 text-slate-700 md:mt-5 md:text-lg md:leading-8">
+                            <p className="mt-4 max-w-lg text-base leading-7  md:mt-5 md:text-lg md:leading-8">
                                 Des objets, des maquettes, des images et des propositions visuelles qui montrent comment les idées prennent forme dans la concentration.
                             </p>
                         </div>
-                        <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
+                        <div className="mt-8 flex flex-wrap gap-3 text-sm -600">
                             <span className="whitespace-nowrap rounded-full border border-black/10 bg-[#f6f5f1] px-4 py-2">Maquettes</span>
                             <span className="whitespace-nowrap rounded-full border border-black/10 bg-[#f6f5f1] px-4 py-2">Volume</span>
                             <span className="whitespace-nowrap rounded-full border border-black/10 bg-[#f6f5f1] px-4 py-2">Création numérique</span>
@@ -88,8 +87,8 @@ export default function Showcase({ children, moreButtonText }: ShowcaseProps) {
                                 </div>
                             ))}
                             <div className="absolute bottom-0 left-1/2 w-[min(100%,18rem)] -translate-x-1/2 rounded-[1.35rem] border border-black/10 bg-[#f7f6f2] px-4 py-3 text-center shadow-[0_18px_45px_-34px_rgba(15,23,42,0.18)] md:w-auto md:rounded-3xl md:px-5 md:py-4">
-                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Galerie</p>
-                                <p className="mt-1 text-base font-semibold text-slate-900 text-nowrap md:text-lg">Une sélection de réalisations</p>
+                                <p className="text-xs font-semibold uppercase tracking-[0.2em] -500">Galerie</p>
+                                <p className="mt-1 text-base font-semibold  text-nowrap md:text-lg">Une sélection de réalisations</p>
                             </div>
                         </div>
                     </div>

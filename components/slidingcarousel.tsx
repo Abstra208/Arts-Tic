@@ -1,9 +1,6 @@
 "use client"
 
 import React from "react"
-import { useRef } from "react"
-import { gsap } from "gsap"
-import { useGSAP } from "@gsap/react"
 
 interface RotationCarouselProps {
   children: React.ReactNode
@@ -12,50 +9,38 @@ interface RotationCarouselProps {
 }
 
 export function SlidingCarousel({ children, speed = 8, className }: RotationCarouselProps) {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const items = React.Children.toArray(children)
 
-  useGSAP(() => {
-    const container = containerRef.current
-    if (!container) return
-
-    const firstGroup = container.querySelector(".carousel-group") as HTMLDivElement
-    if (!firstGroup) return
-
-    const groupWidth = firstGroup.offsetWidth + 8 // Adding margin-right (8px)
-    console.log("Group width:", groupWidth)
-
-    const animation = gsap.timeline({
-      repeat: -1,
-    })
-
-    animation
-      .to(container, {
-        x: -groupWidth,
-        duration: speed,
-        ease: "none",
-      })
-      .set(container, { x: 0 }, speed)
-
-    return () => {
-      animation.kill()
-      gsap.set(container, { x: 0 })
+  const renderItem = (child: React.ReactNode, index: number) => {
+    if (!React.isValidElement<{ className?: string }>(child)) {
+      return child
     }
-  }, [speed, children])
+
+    const existingClassName = child.props.className ?? ""
+
+    return React.cloneElement(child, {
+      className: `h-full w-full object-cover ${existingClassName}`.trim(),
+      key: index,
+    })
+  }
 
   return (
-    <div className={`overflow-hidden ${className}`}>
-      <div ref={containerRef} className="flex flex-row h-full w-full">
-        <div className="carousel-group flex space-x-2 md:space-x-2 mr-2 md:mr-2 shrink-0 h-full w-auto">
-          {React.Children.map(children, (child) => (
-            <div className="flex w-70 md:w-140">
-              {child}
+    <div
+      className={`relative overflow-hidden ${className ?? ""}`.trim()}
+      style={{ "--carousel-duration": `${speed}s` } as React.CSSProperties}
+    >
+      <div className="absolute inset-0 flex w-max will-change-transform animate-carousel">
+        <div className="flex flex-none gap-5 pr-5">
+          {items.map((child, index) => (
+            <div key={index} className="flex-none h-full aspect-square">
+              <div className="w-full h-full overflow-hidden rounded-2xl bg-white/70">{renderItem(child, index)}</div>
             </div>
           ))}
         </div>
-        <div className="flex space-x-2 md:space-x-2 shrink-0 h-full">
-          {React.Children.map(children, (child) => (
-            <div className="flex w-70 md:w-140">
-              {child}
+        <div aria-hidden="true" className="flex flex-none gap-5 pr-5">
+          {items.map((child, index) => (
+            <div key={index} className="flex-none h-full aspect-square">
+              <div className="w-full h-full overflow-hidden rounded-2xl bg-white/70">{renderItem(child, index)}</div>
             </div>
           ))}
         </div>

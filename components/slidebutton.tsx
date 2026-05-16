@@ -33,7 +33,7 @@ export default function SlideButton({
       scroll={!isAnchorLink}
       target={target}
       rel={isExternalLink ? "noopener noreferrer" : undefined}
-      className={`group mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white text-slate-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-black hover:bg-black hover:text-white sm:w-fit sm:flex-nowrap ${sizeClasses} ${className}`}
+      className={`group mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-black/10 bg-white  transition-all duration-300 hover:-translate-y-0.5 hover:border-black hover:bg-black hover:text-white sm:w-fit sm:flex-nowrap ${sizeClasses} ${className}`}
     >
       <span
         className={`overflow-hidden whitespace-nowrap transition-all duration-300 ease-out hidden md:block ${labelVisibilityClass}`}
@@ -41,7 +41,7 @@ export default function SlideButton({
         <span className="pr-1">{displayText}</span>
       </span>
       <span className="whitespace-nowrap md:hidden">{displayText}</span>
-      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white">
+      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100  transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white">
         <ArrowRight size={18} />
       </span>
     </Link>
