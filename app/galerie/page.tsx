@@ -1,6 +1,7 @@
 import HeroProjects from "@/components/heroProjects";
 import PageEndCta from "@/components/pageendcta";
 import Image from "next/image";
+import type { Metadata, ResolvingMetadata } from "next";
 
 const mainGalleryImages = [
     { src: "/images/projets/mode.jpg", alt: "Projet de mode exposé dans la galerie" },
@@ -105,15 +106,23 @@ export default function Galerie() {
     );
 }
 
-export const metadata = {
-  title: "Projets d'élèves, Arts & TIC",
-  description:
-    "Galerie des réalisations des élèves de la concentration Arts et TIC : objets, maquettes, affiches, vidéos et productions numériques des deux parcours.",
-  openGraph: {
-    title: "Projets d'élèves, Arts & TIC | La Camaradière",
-    description:
-      "Des objets, des maquettes, des images et des propositions visuelles issues d'Explo Arts et de TIC et créativité.",
-    url: "https://artstic.crealab.ca/projets",
-    images: [{ url: "https://artstic.crealab.ca/images/projets/hero.jpg" }],
-  },
+export async function generateMetadata(
+    _params: unknown,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const parentMetadata = await parent;
+
+    return {
+        title: "Projets d'élèves, Arts & TIC",
+        description:
+            "Galerie des réalisations des élèves de la concentration Arts et TIC : objets, maquettes, affiches, vidéos et productions numériques des deux parcours.",
+        openGraph: {
+            ...(parentMetadata.openGraph ?? {}),
+            title: "Projets d'élèves, Arts & TIC | La Camaradière",
+            description:
+                "Des objets, des maquettes, des images et des propositions visuelles issues d'Explo Arts et de TIC et créativité.",
+            url: "https://artstic.crealab.ca/projets",
+            images: [{ url: "https://artstic.crealab.ca/images/projets/hero.jpg" }],
+        },
+    };
 }

@@ -4,6 +4,7 @@ import PageEndCta from "@/components/pageendcta";
 import ProductImageGallery from "@/components/productimagegallery";
 import SectionSelector from "@/components/sectionselector";
 import Image from "next/image";
+import type { Metadata, ResolvingMetadata } from "next";
 
 const overviewCards = [
     {
@@ -285,15 +286,23 @@ export default function TicPage() {
     );
 }
 
-export const metadata = {
-  title: "Parcours TIC et créativité, Arts & TIC",
-  description:
-    "TIC et créativité relie image, médias et outils numériques dans des projets de production visuelle : affiches, vidéos, 3D et design.",
-  openGraph: {
-    title: "Parcours TIC et créativité, Arts & TIC | La Camaradière",
-    description:
-      "Concevoir, raconter et produire avec le numérique. Un parcours pour créer avec les outils actuels et penser comme un auteur.",
-    url: "https://artstic.crealab.ca/tic-creativite",
-    images: [{ url: "https://artstic.crealab.ca/images/tic/hero.jpg" }],
-  },
+export async function generateMetadata(
+    _params: unknown,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const parentMetadata = await parent;
+
+    return {
+        title: "Parcours TIC et créativité, Arts & TIC",
+        description:
+            "TIC et créativité relie image, médias et outils numériques dans des projets de production visuelle : affiches, vidéos, 3D et design.",
+        openGraph: {
+            ...(parentMetadata.openGraph ?? {}),
+            title: "Parcours TIC et créativité, Arts & TIC | La Camaradière",
+            description:
+                "Concevoir, raconter et produire avec le numérique. Un parcours pour créer avec les outils actuels et penser comme un auteur.",
+            url: "https://artstic.crealab.ca/tic-creativite",
+            images: [{ url: "https://artstic.crealab.ca/images/tic/hero.jpg" }],
+        },
+    };
 }

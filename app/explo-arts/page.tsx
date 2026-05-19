@@ -4,6 +4,7 @@ import PageEndCta from "@/components/pageendcta";
 import ProductImageGallery from "@/components/productimagegallery";
 import SectionSelector from "@/components/sectionselector";
 import Image from "next/image";
+import type { Metadata, ResolvingMetadata } from "next";
 
 const overviewCards = [
     {
@@ -281,15 +282,23 @@ export default function ArtsPage() {
     );
 }
 
-export const metadata = {
-  title: "Parcours Explo Arts, Arts & TIC",
-  description:
-    "Le parcours Explo Arts explore la matière, le volume et la création artistique concrète. Fabrication, composition et présentation dans un atelier actif.",
-  openGraph: {
-    title: "Parcours Explo Arts, Arts & TIC | La Camaradière",
-    description:
-      "Explo Arts propose une approche concrète de la création : observer, expérimenter, développer des techniques et produire des réalisations réelles.",
-    url: "https://artstic.crealab.ca/explo-arts",
-    images: [{ url: "https://artstic.crealab.ca/images/explo-art/hero.jpg" }],
-  },
+export async function generateMetadata(
+    _params: unknown,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const parentMetadata = await parent;
+
+    return {
+        title: "Parcours Explo Arts, Arts & TIC",
+        description:
+            "Le parcours Explo Arts explore la matière, le volume et la création artistique concrète. Fabrication, composition et présentation dans un atelier actif.",
+        openGraph: {
+            ...(parentMetadata.openGraph ?? {}),
+            title: "Parcours Explo Arts, Arts & TIC | La Camaradière",
+            description:
+                "Explo Arts propose une approche concrète de la création : observer, expérimenter, développer des techniques et produire des réalisations réelles.",
+            url: "https://artstic.crealab.ca/explo-arts",
+            images: [{ url: "https://artstic.crealab.ca/images/explo-art/hero.jpg" }],
+        },
+    };
 }

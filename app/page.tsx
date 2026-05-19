@@ -5,6 +5,7 @@ import PageEndCta from '@/components/pageendcta';
 import { SlidingCarousel } from '@/components/slidingcarousel';
 import { ArrowRight, Plus } from 'lucide-react';
 import Button from '@/components/button';
+import type { Metadata, ResolvingMetadata } from 'next';
 
 export default function Page() {
     const parcours = [
@@ -117,15 +118,23 @@ export default function Page() {
     );
 }
 
-export const metadata = {
-  title: "Arts & TIC, Concentration artistique | La Camaradière",
-  description:
-    "Découvrez la concentration Arts et TIC à l'école secondaire de La Camaradière. Deux parcours créatifs : Explo Arts et TIC et créativité. Inscriptions ouvertes.",
-  openGraph: {
-    title: "Arts & TIC, Concentration artistique | La Camaradière",
-    description:
-      "Un programme où les élèves explorent les arts visuels, la création numérique et la fabrication dans des projets concrets.",
-    url: "https://artstic.crealab.ca",
-    images: [{ url: "https://artstic.crealab.ca/images/hero.jpg" }],
-  },
+export async function generateMetadata(
+    _params: unknown,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const parentMetadata = await parent;
+
+    return {
+        title: "Arts & TIC, Concentration artistique | La Camaradière",
+        description:
+            "Découvrez la concentration Arts et TIC à l'école secondaire de La Camaradière. Deux parcours créatifs : Explo Arts et TIC et créativité.",
+        openGraph: {
+            ...(parentMetadata.openGraph ?? {}),
+            title: "Arts & TIC, Concentration artistique | La Camaradière",
+            description:
+                "Un programme où les élèves explorent les arts visuels, la création numérique et la fabrication dans des projets concrets.",
+            url: "https://artstic.crealab.ca",
+            images: [{ url: "https://artstic.crealab.ca/images/hero.jpg" }],
+        },
+    };
 }
