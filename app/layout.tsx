@@ -83,6 +83,51 @@ const FunnelDisplay = localFont({
   variable: "--font-funnel-display",
 });
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ecole-secondairedelacamaradiere.cssc.gouv.qc.ca/#organization",
+      name: "La Camaradière",
+      url: "https://ecole-secondairedelacamaradiere.cssc.gouv.qc.ca",
+      description:
+        "Arts et TIC, une concentration de la Camaradière. Un programme qui fait dialoguer les arts et les technologies.",
+      logo: "https://ecole-secondairedelacamaradiere.cssc.gouv.qc.ca/wp-content/themes/lacamaradiere/favicon.png",
+      telephone: "418 686-4661",
+      sameAs: [
+        "https://x.com/ecoleseclacama",
+        "https://www.facebook.com/ecoleseclacama",
+        "https://www.youtube.com/channel/UCyDl_03vuTbJIsWk813sHRg",
+        "https://www.flickr.com/photos/126694081@N05/albums/",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "3400, boulevard Neuvialle",
+        addressLocality: "Québec",
+        addressRegion: "QC",
+        postalCode: "G1P 3A8",
+        addressCountry: "CA",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://arts-tic.crealab.ca/#website",
+      url: "https://arts-tic.crealab.ca",
+      name: "Arts & TIC",
+      publisher: {
+        "@id": "https://arts-tic.crealab.ca/#organization",
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://morin.moi/#person",
+      name: "Ludovic Morin",
+      url: "https://morin.moi",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,6 +135,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={`body text-black ${FunnelDisplay.className}`}>
         <Header />
         <Render disabled className='max-w-screen flex flex-col items-center'>
