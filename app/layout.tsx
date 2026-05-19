@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'Arts & TIC, Concentration artistique | La Camaradière',
     template: '%s | La Camaradière',
   },
-  description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CréaLab.',
+  description: 'Arts et TIC, une concentration de la Camaradière. Un programme qui fait dialoguer les arts et les technologies pour les tous les élèves du secondaire.',
   keywords: [
     'Arts',
     'TIC',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_CA',
     title: 'Arts & TIC - Concentration de La Camaradière',
-    description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CréaLab.',
+    description: 'Arts et TIC, une concentration de la Camaradière. Un programme qui fait dialoguer les arts et les technologies pour les tous les élèves du secondaire.',
     url: 'https://arts-tic.crealab.ca',
     siteName: 'Arts & TIC',
     images: [
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Arts & TIC',
-    description: 'Une concentration de La Camaradière. Site web officiel du programme Arts & TIC developpé par le CreaLab.',
+    description: 'Arts et TIC, une concentration de la Camaradière. Un programme qui fait dialoguer les arts et les technologies pour les tous les élèves du secondaire.',
     images: ['/images/hero.jpg'],
   },
   robots: {
