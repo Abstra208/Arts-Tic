@@ -63,6 +63,12 @@ export default function Header() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
+            if (currentScrollY <= 0) {
+                setScrollDirection('up');
+                previousScrollYRef.current = currentScrollY;
+                return;
+            }
+
             if (currentScrollY > previousScrollYRef.current) {
                 setScrollDirection('down');
             } else if (currentScrollY < previousScrollYRef.current) {
